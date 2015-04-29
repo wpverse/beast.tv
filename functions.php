@@ -5,6 +5,9 @@
  * @package Neochrome Quickstart
  */
 
+
+include_once "functions-metaboxes.php";
+
 /**
  * Set the content width based on the theme's design and stylesheet.
  */
