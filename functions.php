@@ -5,8 +5,18 @@
  * @package Neochrome Quickstart
  */
 
-
+// adding CMB2
 include_once "functions-metaboxes.php";
+
+/**
+ * Required: set 'ot_theme_mode' filter to true.
+ */
+add_filter( 'ot_theme_mode', '__return_true' );
+
+/**
+ * Required: include OptionTree.
+ */
+require( trailingslashit( get_template_directory() ) . 'option-tree/ot-loader.php' );
 
 /**
  * Set the content width based on the theme's design and stylesheet.
