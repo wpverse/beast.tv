@@ -98,8 +98,8 @@ add_action( 'after_setup_theme', 'quickstart_setup' );
  */
 function quickstart_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'quickstart' ),
-		'id'            => 'sidebar-1',
+		'name'          => __( 'Right Sidebar', 'quickstart' ),
+		'id'            => 'right-sidebar',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
