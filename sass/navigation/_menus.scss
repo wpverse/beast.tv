@@ -5,7 +5,7 @@
 	width: 100%;
 
 	ul {
-		display: none;
+		//display: none;
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
@@ -14,24 +14,29 @@
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 			float: left;
 			position: absolute;
-			top: 1.5em;
-			left: -999em;
-			z-index: 99999;
+			//top: 1.5em;
+			//left: -999em;
+			display:none;
+			//z-index: 99999;
 
 			ul {
-				left: -999em;
+				//left: -999em;
+				display:none;
 				top: 0;
 			}
 
 			li {
 				&:hover > ul,
 				&.focus > ul {
-					left: 100%;
+					//left: 100%;
+					display:block;
 				}
 			}
 
 			a {
 				width: 200px;
+				padding:5px 10px;
+				background-color:#ffffff;
 			}
 
 			:hover > a,
@@ -40,12 +45,14 @@
 
 			a:hover,
 			a.focus {
+
 			}
 		}
 
 		li:hover > ul,
 		li.focus > ul {
-			left: auto;
+					//left: 100%;
+					display:block;
 		}
 	}
 	li {
@@ -54,11 +61,14 @@
 
 		&:hover > a,
 		&.focus > a {
+							background-color:#EEEEEE;
 		}
 	}
 	a {
 		display: block;
 		text-decoration: none;
+		padding:5px 20px 5px 0;
+
 	}
 
 	.current_page_item > a,

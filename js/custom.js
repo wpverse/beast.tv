@@ -3,12 +3,14 @@
  */
 
 $( document ).ready(function() {
-  // Handler for .ready() called.
+  // 
 });
 $( window ).load(function() {
-  // Run code
+  // 
 });
 
-
+$(document).ready(function () {
+   $('#site-navigation').meanmenu();
+});
 
 
