@@ -1,6 +1,6 @@
 <?php
 /**
- * @package Neochrome Quickstart
+ * @package Neochrome BeastTV
  */
 ?>
 
@@ -10,7 +10,7 @@
 
 		<?php if ( 'post' == get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php quickstart_posted_on(); ?>
+			<?php beast_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
@@ -19,20 +19,20 @@
 		<?php
 			/* translators: %s: Name of current post */
 			the_content( sprintf(
-				__( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'quickstart' ),
+				__( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'beast' ),
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			) );
 		?>
 
 		<?php
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'quickstart' ),
+				'before' => '<div class="page-links">' . __( 'Pages:', 'beast' ),
 				'after'  => '</div>',
 			) );
 		?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php quickstart_entry_footer(); ?>
+		<?php beast_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

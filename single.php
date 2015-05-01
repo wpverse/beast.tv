@@ -2,7 +2,7 @@
 /**
  * The template for displaying all single posts.
  *
- * @package Neochrome Quickstart
+ * @package Neochrome BeastTV
  */
 
 get_header(); ?>

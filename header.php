@@ -4,7 +4,7 @@
  *
  * Displays all of the <head> section and everything up till <div id="content">
  *
- * @package Neochrome Quickstart
+ * @package Neochrome BeastTV
  */
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -19,7 +19,7 @@
 
 <body <?php body_class(); ?>>
 	<div id="page" class="hfeed site">
-		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'quickstart' ); ?></a>
+		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'beast' ); ?></a>
 
 		<header id="masthead" class="container site-header" role="banner">
 			<div class="site-branding row">

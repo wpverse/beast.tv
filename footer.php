@@ -4,7 +4,7 @@
  *
  * Contains the closing of the #content div and all content after
  *
- * @package Neochrome Quickstart
+ * @package Neochrome BeastTV
  */
 ?>
 
@@ -14,9 +14,9 @@
 	<div class="row">
 		<div class="col-md-12">
 			<div class="site-info">
-				<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'quickstart' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'quickstart' ), 'WordPress' ); ?></a>
+				<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'beast' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'beast' ), 'WordPress' ); ?></a>
 				<span class="sep"> | </span>
-				<?php printf( __( 'Theme: %1$s by %2$s.', 'quickstart' ), 'Neochrome Quickstart', '<a href="http://neochro.me" rel="designer">Matthew Taylor</a>' ); ?>
+				<?php printf( __( 'Theme: %1$s by %2$s.', 'beast' ), 'Neochrome BeastTV', '<a href="http://neochro.me" rel="designer">Matthew Taylor</a>' ); ?>
 			</div><!-- .site-info -->
 		</div>
 	</div>

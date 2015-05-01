@@ -12,37 +12,37 @@
 	<?php endif; // End header image check. ?>
 
  *
- * @package Neochrome Quickstart
+ * @package Neochrome BeastTV
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses quickstart_header_style()
- * @uses quickstart_admin_header_style()
- * @uses quickstart_admin_header_image()
+ * @uses beast_header_style()
+ * @uses beast_admin_header_style()
+ * @uses beast_admin_header_image()
  */
-function quickstart_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'quickstart_custom_header_args', array(
+function beast_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'beast_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
 		'width'                  => 1000,
 		'height'                 => 250,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'quickstart_header_style',
-		'admin-head-callback'    => 'quickstart_admin_header_style',
-		'admin-preview-callback' => 'quickstart_admin_header_image',
+		'wp-head-callback'       => 'beast_header_style',
+		'admin-head-callback'    => 'beast_admin_header_style',
+		'admin-preview-callback' => 'beast_admin_header_image',
 	) ) );
 }
-add_action( 'after_setup_theme', 'quickstart_custom_header_setup' );
+add_action( 'after_setup_theme', 'beast_custom_header_setup' );
 
-if ( ! function_exists( 'quickstart_header_style' ) ) :
+if ( ! function_exists( 'beast_header_style' ) ) :
 /**
  * Styles the header image and text displayed on the blog
  *
- * @see quickstart_custom_header_setup().
+ * @see beast_custom_header_setup().
  */
-function quickstart_header_style() {
+function beast_header_style() {
 	$header_text_color = get_header_textcolor();
 
 	// If no custom options for text are set, let's bail
@@ -75,15 +75,15 @@ function quickstart_header_style() {
 	</style>
 	<?php
 }
-endif; // quickstart_header_style
+endif; // beast_header_style
 
-if ( ! function_exists( 'quickstart_admin_header_style' ) ) :
+if ( ! function_exists( 'beast_admin_header_style' ) ) :
 /**
  * Styles the header image displayed on the Appearance > Header admin panel.
  *
- * @see quickstart_custom_header_setup().
+ * @see beast_custom_header_setup().
  */
-function quickstart_admin_header_style() {
+function beast_admin_header_style() {
 ?>
 	<style type="text/css">
 		.appearance_page_custom-header #headimg {
@@ -103,15 +103,15 @@ function quickstart_admin_header_style() {
 	</style>
 <?php
 }
-endif; // quickstart_admin_header_style
+endif; // beast_admin_header_style
 
-if ( ! function_exists( 'quickstart_admin_header_image' ) ) :
+if ( ! function_exists( 'beast_admin_header_image' ) ) :
 /**
  * Custom header image markup displayed on the Appearance > Header admin panel.
  *
- * @see quickstart_custom_header_setup().
+ * @see beast_custom_header_setup().
  */
-function quickstart_admin_header_image() {
+function beast_admin_header_image() {
 	$style = sprintf( ' style="color:#%s;"', get_header_textcolor() );
 ?>
 	<div id="headimg">
@@ -123,4 +123,4 @@ function quickstart_admin_header_image() {
 	</div>
 <?php
 }
-endif; // quickstart_admin_header_image
+endif; // beast_admin_header_image
