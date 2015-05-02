@@ -300,29 +300,9 @@ function beast_taxonomy_add_new_meta_field() {
 }
 add_action( 'city_add_form_fields', 'beast_taxonomy_add_new_meta_field', 10, 2 );
 
+
 // Edit term page
 function beast_taxonomy_edit_meta_field($term) {
-	// put the term ID into a variable
-	$t_id = $term->term_id;
-	// retrieve the existing value(s) for this meta field. This returns an array
-	$term_meta = get_option( "taxonomy_$t_id" );
-	ob_start(); ?>
-	<!--mrt01 after wp_editor -->
-	<?php wp_editor( $term_meta['custom_term_meta'], 'city_address', array( 'textarea_rows' => 5 ) ); 
-	$wp_editor = ob_get_contents();
-	ob_end_clean();
-
-	$output = '<!--mrt02 after wp_editor --><tr class="form-field">';
-	$output .= '<th scope="row" valign="top"><label for="city_address">';
-	$output .= 'Address'; 
-	$output .= '</label></th>';
-	$output .= $wp_editor; 
-	$output .= '</td></tr>';
-	echo $output;
-}
-
-// Edit term page
-function pippin_taxonomy_edit_meta_field($term) {
  
 	// put the term ID into a variable
 	$t_id = $term->term_id;
@@ -330,7 +310,7 @@ function pippin_taxonomy_edit_meta_field($term) {
 	// retrieve the existing value(s) for this meta field. This returns an array
 	$term_meta = get_option( "taxonomy_$t_id" ); ?>
 	<tr class="form-field">
-	<th scope="row" valign="top"><label for="term_meta[custom_term_meta]"><?php _e( 'Example meta field', 'pippin' ); ?></label></th>
+	<th scope="row" valign="top"><label for="term_meta[custom_term_meta]"><?php _e( 'City Address', 'pippin' ); ?></label></th>
 		<td>
 			<input type="text" name="term_meta[custom_term_meta]" id="term_meta[custom_term_meta]" value="<?php echo esc_attr( $term_meta['custom_term_meta'] ) ? esc_attr( $term_meta['custom_term_meta'] ) : ''; ?>">
 			<p class="description"><?php _e( 'Enter a value for this field','pippin' ); ?></p>
@@ -338,9 +318,8 @@ function pippin_taxonomy_edit_meta_field($term) {
 	</tr>
 <?php
 }
-add_action( 'category_edit_form_fields', 'pippin_taxonomy_edit_meta_field', 10, 2 );
 
-add_action( 'city_edit_form_fields', 'beast_taxonomy_edit_meta_field', 0, 2 );
+add_action( 'city_edit_form_fields', 'beast_taxonomy_edit_meta_field', 10, 2 );
 
 // Save extra taxonomy fields callback function.
 function save_taxonomy_custom_meta( $term_id ) {
