@@ -8,6 +8,7 @@
 // adding CMB2
 include_once "functions-metaboxes.php";
 
+
 /**
  * Required: set 'ot_theme_mode' filter to true.
  */
@@ -91,6 +92,123 @@ function beast_setup() {
 endif; // beast_setup
 add_action( 'after_setup_theme', 'beast_setup' );
 
+
+
+add_action( 'init', 'beast_custom_post_types_init' );
+/**
+ * Register a Portfolio post type
+ * yes.. we are going with the 'elaborate' version.
+ *
+ * @link http://codex.wordpress.org/Function_Reference/register_post_type
+ */
+function beast_custom_post_types_init() {
+	$labels = array(
+		'name'               => _x( 'Portfolios', 'post type general name', '_beast' ),
+		'singular_name'      => _x( 'Portfolio', 'post type singular name', '_beast' ),
+		'menu_name'          => _x( 'Portfolios', 'admin menu', '_beast' ),
+		'name_admin_bar'     => _x( 'Portfolio', 'add new on admin bar', '_beast' ),
+		'add_new'            => _x( 'Add New', 'Portfolio', '_beast' ),
+		'add_new_item'       => __( 'Add New Portfolio', '_beast' ),
+		'new_item'           => __( 'New Portfolio', '_beast' ),
+		'edit_item'          => __( 'Edit Portfolio', '_beast' ),
+		'view_item'          => __( 'View Portfolio', '_beast' ),
+		'all_items'          => __( 'All Portfolios', '_beast' ),
+		'search_items'       => __( 'Search Portfolios', '_beast' ),
+		'parent_item_colon'  => __( 'Parent Portfolios:', '_beast' ),
+		'not_found'          => __( 'No Portfolios found.', '_beast' ),
+		'not_found_in_trash' => __( 'No Portfolios found in Trash.', '_beast' )
+		);
+
+	$args = array(
+		'labels'             => $labels,
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => array( 'slug' => 'portfolio' ),
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => null,
+		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'revisions')
+		);
+
+	register_post_type( 'portfolio', $args );
+
+
+
+	$contact_labels = array(
+		'name'               => _x( 'Sales Contacts', 'post type general name', '_beast' ),
+		'singular_name'      => _x( 'Sales Contact', 'post type singular name', '_beast' ),
+		'menu_name'          => _x( 'Sales Contacts', 'admin menu', '_beast' ),
+		'name_admin_bar'     => _x( 'Sales Contact', 'add new on admin bar', '_beast' ),
+		'add_new'            => _x( 'Add New', 'Sales Contact', '_beast' ),
+		'add_new_item'       => __( 'Add New Sales Contact', '_beast' ),
+		'new_item'           => __( 'New Sales Contact', '_beast' ),
+		'edit_item'          => __( 'Edit Sales Contact', '_beast' ),
+		'view_item'          => __( 'View Sales Contact', '_beast' ),
+		'all_items'          => __( 'All Sales Contacts', '_beast' ),
+		'search_items'       => __( 'Search Sales Contacts', '_beast' ),
+		'parent_item_colon'  => __( 'Parent Sales Contacts:', '_beast' ),
+		'not_found'          => __( 'No Sales Contacts found.', '_beast' ),
+		'not_found_in_trash' => __( 'No Sales Contacts found in Trash.', '_beast' )
+		);
+
+$contact_args = array(
+	'labels'             => $contact_labels,
+	'public'             => true,
+	'publicly_queryable' => true,
+	'show_ui'            => true,
+	'show_in_menu'       => true,
+	'query_var'          => true,
+	'rewrite'            => array( 'slug' => 'sales-contact' ),
+	'capability_type'    => 'post',
+	'has_archive'        => true,
+	'hierarchical'       => false,
+	'menu_position'      => null,
+	'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'revisions')
+	);
+
+register_post_type( 'sales-contact', $contact_args );
+
+
+}
+
+
+add_action( 'init', 'create_city_taxonomy', 0 );
+
+// create two taxonomies, Citys and Locations for the post type "book"
+function create_city_taxonomy() {
+  // Portfolio City taxonomy, make it hierarchical (like cities)
+	$labels = array(
+		'name'              => _x( 'Cities', 'taxonomy general name' ),
+		'singular_name'     => _x( 'City', 'taxonomy singular name' ),
+		'search_items'      => __( 'Search Cities' ),
+		'all_items'         => __( 'All Cities' ),
+		'parent_item'       => __( 'Parent City' ),
+		'parent_item_colon' => __( 'Parent City:' ),
+		'edit_item'         => __( 'Edit City' ),
+		'update_item'       => __( 'Update City' ),
+		'add_new_item'      => __( 'Add New City' ),
+		'new_item_name'     => __( 'New City Name' ),
+		'menu_name'         => __( 'City' ),
+		);
+
+	$args = array(
+		'hierarchical'      => true,
+		'labels'            => $labels,
+		'show_ui'           => true,
+		'show_admin_column' => true,
+		'query_var'         => true,
+		'rewrite'           => array( 'slug' => 'city' ),
+		);
+
+	register_taxonomy( 'city', array( 'portfolio','user','sales-contact' ), $args );
+
+}
+
+
 /**
  * Register widget area.
  *
@@ -164,3 +282,80 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+
+
+
+
+// Add term page
+function beast_taxonomy_add_new_meta_field() {
+	// this will add the custom meta field to the add new term page
+	?>
+	<div class="form-field">
+		<label for="term_meta[custom_term_meta]"><?php _e( 'Example meta field', 'beast' ); ?></label>
+		<input type="text" name="term_meta[custom_term_meta]" id="term_meta[custom_term_meta]" value="">
+		<p class="description"><?php _e( 'Enter a value for this field','beast' ); ?></p>
+	</div>
+	<?php
+}
+add_action( 'city_add_form_fields', 'beast_taxonomy_add_new_meta_field', 10, 2 );
+
+// Edit term page
+function beast_taxonomy_edit_meta_field($term) {
+	// put the term ID into a variable
+	$t_id = $term->term_id;
+	// retrieve the existing value(s) for this meta field. This returns an array
+	$term_meta = get_option( "taxonomy_$t_id" );
+	ob_start(); ?>
+	<!--mrt01 after wp_editor -->
+	<?php wp_editor( $term_meta['custom_term_meta'], 'city_address', array( 'textarea_rows' => 5 ) ); 
+	$wp_editor = ob_get_contents();
+	ob_end_clean();
+
+	$output = '<!--mrt02 after wp_editor --><tr class="form-field">';
+	$output .= '<th scope="row" valign="top"><label for="city_address">';
+	$output .= 'Address'; 
+	$output .= '</label></th>';
+	$output .= $wp_editor; 
+	$output .= '</td></tr>';
+	echo $output;
+}
+
+// Edit term page
+function pippin_taxonomy_edit_meta_field($term) {
+ 
+	// put the term ID into a variable
+	$t_id = $term->term_id;
+ 
+	// retrieve the existing value(s) for this meta field. This returns an array
+	$term_meta = get_option( "taxonomy_$t_id" ); ?>
+	<tr class="form-field">
+	<th scope="row" valign="top"><label for="term_meta[custom_term_meta]"><?php _e( 'Example meta field', 'pippin' ); ?></label></th>
+		<td>
+			<input type="text" name="term_meta[custom_term_meta]" id="term_meta[custom_term_meta]" value="<?php echo esc_attr( $term_meta['custom_term_meta'] ) ? esc_attr( $term_meta['custom_term_meta'] ) : ''; ?>">
+			<p class="description"><?php _e( 'Enter a value for this field','pippin' ); ?></p>
+		</td>
+	</tr>
+<?php
+}
+add_action( 'category_edit_form_fields', 'pippin_taxonomy_edit_meta_field', 10, 2 );
+
+add_action( 'city_edit_form_fields', 'beast_taxonomy_edit_meta_field', 0, 2 );
+
+// Save extra taxonomy fields callback function.
+function save_taxonomy_custom_meta( $term_id ) {
+	if ( isset( $_POST['term_meta'] ) ) {
+		$t_id = $term_id;
+		$term_meta = get_option( "taxonomy_$t_id" );
+		$cat_keys = array_keys( $_POST['term_meta'] );
+		foreach ( $cat_keys as $key ) {
+			if ( isset ( $_POST['term_meta'][$key] ) ) {
+				$term_meta[$key] = $_POST['term_meta'][$key];
+			}
+		}
+		// Save the option array.
+		update_option( "taxonomy_$t_id", $term_meta );
+	}
+}  
+add_action( 'edited_city', 'save_taxonomy_custom_meta', 10, 2 );  
+add_action( 'create_city', 'save_taxonomy_custom_meta', 10, 2 );
