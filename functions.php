@@ -5,6 +5,9 @@
  * @package Neochrome BeastTV
  */
 
+add_theme_support( 'post-thumbnails' );
+
+
 // adding CMB2
 include_once "functions-metaboxes.php";
 
@@ -173,10 +176,46 @@ $contact_args = array(
 register_post_type( 'sales-contact', $contact_args );
 
 
+	$city_labels = array(
+		'name'               => _x( 'Cities', 'post type general name', '_beast' ),
+		'singular_name'      => _x( 'City', 'post type singular name', '_beast' ),
+		'menu_name'          => _x( 'Cities', 'admin menu', '_beast' ),
+		'name_admin_bar'     => _x( 'City', 'add new on admin bar', '_beast' ),
+		'add_new'            => _x( 'Add New', 'City', '_beast' ),
+		'add_new_item'       => __( 'Add New City', '_beast' ),
+		'new_item'           => __( 'New City', '_beast' ),
+		'edit_item'          => __( 'Edit City', '_beast' ),
+		'view_item'          => __( 'View City', '_beast' ),
+		'all_items'          => __( 'All Cities', '_beast' ),
+		'search_items'       => __( 'Search Cities', '_beast' ),
+		'parent_item_colon'  => __( 'Parent Cities:', '_beast' ),
+		'not_found'          => __( 'No Cities found.', '_beast' ),
+		'not_found_in_trash' => __( 'No Cities found in Trash.', '_beast' )
+		);
+
+$city_args = array(
+	'labels'             => $city_labels,
+	'public'             => true,
+	'publicly_queryable' => true,
+	'show_ui'            => true,
+	'show_in_menu'       => true,
+	'query_var'          => true,
+	'rewrite'            => array( 'slug' => 'city' ),
+	'capability_type'    => 'post',
+	'has_archive'        => true,
+	'hierarchical'       => false,
+	'menu_position'      => null,
+	'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'revisions')
+	);
+
+register_post_type( 'city', $city_args );
+
+
+
 }
 
 
-add_action( 'init', 'create_city_taxonomy', 0 );
+//add_action( 'init', 'create_city_taxonomy', 0 );
 
 // create two taxonomies, Citys and Locations for the post type "book"
 function create_city_taxonomy() {
@@ -283,58 +322,3 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/jetpack.php';
 
-
-
-
-
-// Add term page
-function beast_taxonomy_add_new_meta_field() {
-	// this will add the custom meta field to the add new term page
-	?>
-	<div class="form-field">
-		<label for="term_meta[custom_term_meta]"><?php _e( 'Example meta field', 'beast' ); ?></label>
-		<input type="text" name="term_meta[custom_term_meta]" id="term_meta[custom_term_meta]" value="">
-		<p class="description"><?php _e( 'Enter a value for this field','beast' ); ?></p>
-	</div>
-	<?php
-}
-add_action( 'city_add_form_fields', 'beast_taxonomy_add_new_meta_field', 10, 2 );
-
-
-// Edit term page
-function beast_taxonomy_edit_meta_field($term) {
- 
-	// put the term ID into a variable
-	$t_id = $term->term_id;
- 
-	// retrieve the existing value(s) for this meta field. This returns an array
-	$term_meta = get_option( "taxonomy_$t_id" ); ?>
-	<tr class="form-field">
-	<th scope="row" valign="top"><label for="term_meta[custom_term_meta]"><?php _e( 'City Address', 'pippin' ); ?></label></th>
-		<td>
-			<input type="text" name="term_meta[custom_term_meta]" id="term_meta[custom_term_meta]" value="<?php echo esc_attr( $term_meta['custom_term_meta'] ) ? esc_attr( $term_meta['custom_term_meta'] ) : ''; ?>">
-			<p class="description"><?php _e( 'Enter a value for this field','pippin' ); ?></p>
-		</td>
-	</tr>
-<?php
-}
-
-add_action( 'city_edit_form_fields', 'beast_taxonomy_edit_meta_field', 10, 2 );
-
-// Save extra taxonomy fields callback function.
-function save_taxonomy_custom_meta( $term_id ) {
-	if ( isset( $_POST['term_meta'] ) ) {
-		$t_id = $term_id;
-		$term_meta = get_option( "taxonomy_$t_id" );
-		$cat_keys = array_keys( $_POST['term_meta'] );
-		foreach ( $cat_keys as $key ) {
-			if ( isset ( $_POST['term_meta'][$key] ) ) {
-				$term_meta[$key] = $_POST['term_meta'][$key];
-			}
-		}
-		// Save the option array.
-		update_option( "taxonomy_$t_id", $term_meta );
-	}
-}  
-add_action( 'edited_city', 'save_taxonomy_custom_meta', 10, 2 );  
-add_action( 'create_city', 'save_taxonomy_custom_meta', 10, 2 );
