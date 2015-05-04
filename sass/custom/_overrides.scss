@@ -76,8 +76,15 @@ body.admin-bar{
 		color:white;
 	}
 }
+					// see archive-city.php   The bootstrap accordian behavior is unfortunately dependent on the accordian groups being wrapped in a .panel element. It is rather silly. But it's a bug/feature we have to work around. We also need to reset the unwanted css for .panel, but just for where we are using it!
 
-
+#city-accordion .panel {
+margin:0;
+background:none;
+border:none;
+border-radius:0;
+box-shadow:none;
+}
 
 
 

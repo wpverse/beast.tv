@@ -578,4 +578,11 @@ object {
       color: #ffffff; }
   .city-wrap:hover h1 {
     color: white; }
+
+#city-accordion .panel {
+  margin: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  box-shadow: none; }
 /*# sourceMappingURL=style.css.map */
