@@ -91,6 +91,11 @@ function beast_setup() {
 		'default-color' => 'ffffff',
 		'default-image' => '',
 		) ) );
+
+
+	add_image_size( 'hd_background', 2560, 9999 );
+
+
 }
 endif; // beast_setup
 add_action( 'after_setup_theme', 'beast_setup' );
@@ -176,22 +181,22 @@ $contact_args = array(
 register_post_type( 'sales-contact', $contact_args );
 
 
-	$city_labels = array(
-		'name'               => _x( 'Cities', 'post type general name', '_beast' ),
-		'singular_name'      => _x( 'City', 'post type singular name', '_beast' ),
-		'menu_name'          => _x( 'Cities', 'admin menu', '_beast' ),
-		'name_admin_bar'     => _x( 'City', 'add new on admin bar', '_beast' ),
-		'add_new'            => _x( 'Add New', 'City', '_beast' ),
-		'add_new_item'       => __( 'Add New City', '_beast' ),
-		'new_item'           => __( 'New City', '_beast' ),
-		'edit_item'          => __( 'Edit City', '_beast' ),
-		'view_item'          => __( 'View City', '_beast' ),
-		'all_items'          => __( 'All Cities', '_beast' ),
-		'search_items'       => __( 'Search Cities', '_beast' ),
-		'parent_item_colon'  => __( 'Parent Cities:', '_beast' ),
-		'not_found'          => __( 'No Cities found.', '_beast' ),
-		'not_found_in_trash' => __( 'No Cities found in Trash.', '_beast' )
-		);
+$city_labels = array(
+	'name'               => _x( 'Cities', 'post type general name', '_beast' ),
+	'singular_name'      => _x( 'City', 'post type singular name', '_beast' ),
+	'menu_name'          => _x( 'Cities', 'admin menu', '_beast' ),
+	'name_admin_bar'     => _x( 'City', 'add new on admin bar', '_beast' ),
+	'add_new'            => _x( 'Add New', 'City', '_beast' ),
+	'add_new_item'       => __( 'Add New City', '_beast' ),
+	'new_item'           => __( 'New City', '_beast' ),
+	'edit_item'          => __( 'Edit City', '_beast' ),
+	'view_item'          => __( 'View City', '_beast' ),
+	'all_items'          => __( 'All Cities', '_beast' ),
+	'search_items'       => __( 'Search Cities', '_beast' ),
+	'parent_item_colon'  => __( 'Parent Cities:', '_beast' ),
+	'not_found'          => __( 'No Cities found.', '_beast' ),
+	'not_found_in_trash' => __( 'No Cities found in Trash.', '_beast' )
+	);
 
 $city_args = array(
 	'labels'             => $city_labels,
@@ -200,7 +205,7 @@ $city_args = array(
 	'show_ui'            => true,
 	'show_in_menu'       => true,
 	'query_var'          => true,
-	'rewrite'            => array( 'slug' => 'city' ),
+	'rewrite'            => array( 'slug' => 'cities' ),
 	'capability_type'    => 'post',
 	'has_archive'        => true,
 	'hierarchical'       => false,
@@ -321,4 +326,22 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+//$query->is_main_query()
+function reorder_cities( $query ) {
+	if ( $query->is_archive() && is_post_type_archive( 'city' ) ) {
+		$query->set( 'order', 'ASC' );
+		$query->set( 'orderby', 'title' );
+		//print_r($query);
+		//echo '<br>post_type: ';
+		//print_r($query->post_type);
+	}
+}
+add_action( 'pre_get_posts', 'reorder_cities' );
+
+
+
+
+
+
 
