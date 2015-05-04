@@ -215,7 +215,39 @@ $city_args = array(
 
 register_post_type( 'city', $city_args );
 
+	$slidelabels = array(
+		'name'               => _x( 'Slides', 'post type general name', '_beast' ),
+		'singular_name'      => _x( 'Slide', 'post type singular name', '_beast' ),
+		'menu_name'          => _x( 'Home Slides', 'admin menu', '_beast' ),
+		'name_admin_bar'     => _x( 'Slide', 'add new on admin bar', '_beast' ),
+		'add_new'            => _x( 'Add New', 'Slide', '_beast' ),
+		'add_new_item'       => __( 'Add New Slide', '_beast' ),
+		'new_item'           => __( 'New Slide', '_beast' ),
+		'edit_item'          => __( 'Edit Slide', '_beast' ),
+		'view_item'          => __( 'View Slide', '_beast' ),
+		'all_items'          => __( 'All Slides', '_beast' ),
+		'search_items'       => __( 'Search Slides', '_beast' ),
+		'parent_item_colon'  => __( 'Parent Slides:', '_beast' ),
+		'not_found'          => __( 'No Slides found.', '_beast' ),
+		'not_found_in_trash' => __( 'No Slides found in Trash.', '_beast' )
+		);
 
+	$slideargs = array(
+		'labels'             => $slidelabels,
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => array( 'slug' => 'slide' ),
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => null,
+		'supports'           => array( 'title', 'editor', 'author', 'thumbnail')
+		);
+
+	register_post_type( 'home-slides', $slideargs );
 
 }
 
