@@ -74,14 +74,25 @@ function beast_register_demo_metabox() {
 		'on_front' => false,
 		) );
 
+
+// get CPTonomy "city" term list to populate option array
+// don't use a CMB 'taxonomy', it won't work in this case.
+	$taxonomy_args = array(
+		'hide_empty' => false,
+		);
+	$city_terms = get_terms( 'city', $taxonomy_args );
+	$city_term_array = array();
+	foreach($city_terms as $city_object){
+		$city_term_array[$city_object->term_id] = $city_object->name;
+	}
+
 	$beast_user_city->add_field( array(
-		'name'     => __( 'Taxonomy Multi Checkbox', 'cmb2' ),
+		'name'     => __( 'Cities', 'cmb2' ),
 		'desc'     => __( 'field description (optional)', 'cmb2' ),
-		'id'       => $prefix . 'multitaxonomy',
-		'type'     => 'taxonomy_multicheck',
-		'taxonomy' => 'city', // Taxonomy Slug
-		// 'inline'  => true, // Toggles display to inline
+		'id'       => $prefix . 'user_cities',
+		'type'     => 'multicheck',
+		'options' =>  $city_term_array,
 		) );
 
-  }
+}
 
