@@ -282,6 +282,8 @@ function beast_scripts() {
 	wp_enqueue_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' );
 	wp_enqueue_style( 'beast-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'meanmenu-style', get_template_directory_uri().'/css/meanmenu.min.css' );
+	wp_enqueue_style( 'google-fonts', 'http://fonts.googleapis.com/css?family=EB+Garamond' );
+
 
 	if (!is_admin()){
 		wp_deregister_script('jquery');

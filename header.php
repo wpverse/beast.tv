@@ -20,24 +20,41 @@
 <body <?php body_class(); ?>>
 	<div id="page" class="hfeed site">
 		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'beast' ); ?></a>
+		<div class="header-wrap">
+			<header id="masthead" class="container site-header" role="banner">
+				<div class="site-branding row">
+					<div class="col-md-12">
+						<a id="site-logo-wrap" href="<?php echo home_url( '/' ); ?>" class="left-side">
+							<img id="site-logo" src="<?php echo get_template_directory_uri(); ?>/images/logo_198_63.png">
+						</a>
+					<!-- h1 class="site-title"><a href="<?php //echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php //bloginfo( 'name' ); ?></a></h1>
+					<h2 class="site-description"><?php //bloginfo( 'description' ); ?></h2 -->
+						<a id="menu-stack" href="#site-navigation" class="right-side collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="site-navigation"><i class="fa fa-bars fa-3x"></i></a>					
+					</div>
 
-		<header id="masthead" class="container site-header" role="banner">
-			<div class="site-branding row">
-				<div class="col-md-12">
-					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-					<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-				</div>
-			</div><!-- .site-branding -->
+				</div><!-- .site-branding -->
 
-			<nav id="site-navigation" class="main-navigation" role="navigation">
 
-				<?php wp_nav_menu( array(
-				'theme_location' => 'primary',
-				'container' => false,
-				 'menu_id' => 'primary-menu'
-				  ) ); ?>
+				<nav id="site-navigation" class="main-navigation collapse" role="navigation" aria-expanded="false" style="display:block; height:0px;" >
+					<div class="row">
+						<div class="col-sm-10 col-sm-offset-1">
+							<div class="menu-wrap">
+								<?php wp_nav_menu( array(
+									'theme_location' => 'primary',
+									'container' => false,
+									'menu_id' => 'primary-menu'
+									) ); ?>
+								</div>
+							</div>
+						</div>
+					</nav><!-- #site-navigation -->
 
-			</nav><!-- #site-navigation -->
-		</header><!-- #masthead -->
+				</header><!-- #masthead -->
+			</div><!-- header wrap -->
+			<div id="content" class="site-content">
 
-		<div id="content" class="site-content">
+
+
+
+
+

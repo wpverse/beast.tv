@@ -13,12 +13,12 @@ get_header(); ?>
 	<main id="main" class="site-main" role="main">
 		<div id="city-accordion" class="city-archive-wrap">
 			<?php if ( have_posts() ) : ?>
-				<header class="page-header">
+				<!-- header class="page-header">
 					<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="taxonomy-description">', '</div>' );
+					//the_archive_title( '<h1 class="page-title">', '</h1>' );
+					//the_archive_description( '<div class="taxonomy-description">', '</div>' );
 					?>
-				</header><!-- .page-header -->
+				</header --><!-- .page-header -->
 				<?php /* Start the Loop */ ?>
 				<?php while ( have_posts() ) : the_post(); ?>
 					<?php 
@@ -29,7 +29,7 @@ get_header(); ?>
 					// the bootstrap accordian behavior is unfortunately dependent on the accordian groups being wrapped in a .panel element. It is rather silly. But it's a bug/feature we have to work around. We also need to reset the unwanted css for .panel
 					?>
 					<div class="panel">
-						<div <?php post_class('city-wrap'); ?> style="background-image:url('<?php echo $img_url; ?>');"
+						<div <?php post_class('city-wrap clickable'); ?> style="background-image:url('<?php echo $img_url; ?>');"
 							data-parent="#city-accordion"  data-toggle="collapse" data-target="#city-<?php echo $post->post_name; ?>" aria-expanded="false" aria-controls="city-<?php echo $post->post_name; ?>">
 							<div class="container">
 								<div class="row city-content">

@@ -41,6 +41,9 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Captions
 	## Galleries
 --------------------------------------------------------------*/
+.garamond {
+  font-family: 'EB Garamond', serif; }
+
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -238,7 +241,7 @@ a {
   a:hover,
   a:focus,
   a:active {
-    color: #f8dad6; }
+    color: #f83213; }
   a:focus {
     outline: thin dotted; }
   a:hover,
@@ -252,7 +255,18 @@ a {
   clear: both;
   display: block;
   float: left;
-  width: 100%; }
+  width: 100%;
+  padding-left: 185px;
+  padding-right: 40px;
+  font-family: 'EB Garamond', serif; }
+  .main-navigation .menu-wrap {
+    display: table;
+    width: 100%; }
+    .main-navigation .menu-wrap ul#primary-menu {
+      display: table-row;
+      width: 100%; }
+      .main-navigation .menu-wrap ul#primary-menu li {
+        display: table-cell; }
   .main-navigation ul {
     list-style: none;
     margin: 0;
@@ -271,20 +285,21 @@ a {
       .main-navigation ul ul a {
         width: 200px;
         padding: 5px 10px;
-        background-color: #ffffff; }
+        color: white; }
+        .main-navigation ul ul a:visited {
+          color: white; }
     .main-navigation ul li:hover > ul,
     .main-navigation ul li.focus > ul {
       display: block; }
   .main-navigation li {
-    float: left;
-    position: relative; }
-    .main-navigation li:hover > a,
-    .main-navigation li.focus > a {
-      background-color: #EEEEEE; }
+    text-align: center; }
   .main-navigation a {
     display: block;
     text-decoration: none;
-    padding: 5px 20px 5px 0; }
+    color: white;
+    font-size: 30px; }
+    .main-navigation a:visited {
+      color: white; }
 
 /* Small menu. */
 .menu-toggle,
@@ -541,7 +556,8 @@ object {
   background-size: cover;
   background-repeat: no-repeat;
   background-blend-mode: multiply;
-  color: #b3d5db; }
+  color: #b3d5db;
+  border-bottom: 6px solid #222222; }
   .city-wrap a {
     color: #b3d5db; }
     .city-wrap a:visited {
@@ -585,4 +601,50 @@ object {
   border: none;
   border-radius: 0;
   box-shadow: none; }
+
+.clickable {
+  cursor: pointer; }
+
+#masthead {
+  position: relative; }
+
+.site-branding {
+  display: block;
+  position: absolute;
+  width: 100%; }
+
+.header-wrap {
+  background-color: #b3d5db; }
+
+#site-navigation {
+  line-height: 130px; }
+
+#site-logo {
+  max-height: 62px;
+  padding: 2px 0; }
+
+#site-navigation li a {
+  position: relative;
+  bottom: -6px; }
+
+#masthead .site-branding div #site-logo-wrap {
+  display: block;
+  position: absolute;
+  line-height: 130px;
+  z-index: 10; }
+
+#masthead .site-branding div #menu-stack {
+  display: block;
+  position: absolute;
+  line-height: 130px;
+  z-index: 10; }
+  #masthead .site-branding div #menu-stack .fa {
+    position: relative;
+    bottom: -9px; }
+
+#masthead .site-branding div .left-side {
+  left: 0; }
+
+#masthead .site-branding div .right-side {
+  right: 0; }
 /*# sourceMappingURL=style.css.map */

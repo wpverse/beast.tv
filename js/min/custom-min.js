@@ -1,1 +1,1 @@
-$(document).ready(function(){}),$(window).load(function(){}),$(document).ready(function(){$("#site-navigation").meanmenu(),$("xarticle.city .entry-content a").click(function(n){n.stopPropagation()})});
+$(document).ready(function(){}),$(window).load(function(){}),$(document).ready(function(){$("#site-navigation").meanmenu(),$("article.city .entry-content a").click(function(n){n.stopPropagation()})});

@@ -14,7 +14,7 @@
  	$('#site-navigation').meanmenu();
 
 
- 	$('xarticle.city .entry-content a').click(function(event){
+ 	$('article.city .entry-content a').click(function(event){
  		event.stopPropagation();
  	});
 

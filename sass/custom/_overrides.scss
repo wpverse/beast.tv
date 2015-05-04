@@ -26,6 +26,7 @@ body.admin-bar{
 	background-repeat: no-repeat;
 	background-blend-mode: multiply;
 	color: #b3d5db;
+	border-bottom:6px solid #222222;
 	a {
 		color: #b3d5db;
 
@@ -78,13 +79,96 @@ body.admin-bar{
 }
 					// see archive-city.php   The bootstrap accordian behavior is unfortunately dependent on the accordian groups being wrapped in a .panel element. It is rather silly. But it's a bug/feature we have to work around. We also need to reset the unwanted css for .panel, but just for where we are using it!
 
-#city-accordion .panel {
-margin:0;
-background:none;
-border:none;
-border-radius:0;
-box-shadow:none;
+					#city-accordion .panel {
+						margin:0;
+						background:none;
+						border:none;
+						border-radius:0;
+						box-shadow:none;
+					}
+
+
+
+					.clickable{
+						cursor: pointer;
+					}
+					#masthead {
+						position:relative;
+					}
+					.site-branding {
+						display:block;
+						position:absolute;
+						width:100%;
+					}
+					.header-wrap {
+						background-color:#b3d5db;
+					}
+					#site-navigation {
+						line-height:130px;
+					}
+					#site-logo {
+						max-height:62px;
+						padding:2px 0;
+
+					}
+					#menu-stack, #menu-stack .fa{
+
+	//vertical-align: text-bottom;
 }
+#masthead .site-branding {
+	//line-height:130px;
+	a#menu-stack {
+		//display:block;
+		//position:relative;
+		//bottom:-9px;
+	}
+}
+
+#site-navigation li a {
+	position:relative;
+	bottom:-6px;
+}
+
+#masthead{
+	//height:130px;
+	.site-branding{
+		div{
+			#site-logo-wrap{
+				display:block;
+				position:absolute;
+				line-height:130px;
+				z-index:10;
+			}
+
+			#menu-stack{
+				display:block;
+				position:absolute;
+				line-height:130px;
+				z-index:10;
+				.fa{
+					position:relative;
+					bottom:-9px;
+				}
+			}
+
+			.left-side{
+				left:0;
+			}
+
+			.right-side{
+				right:0;
+			}
+
+		}
+	}
+}
+
+
+
+
+
+
+
 
 
 
