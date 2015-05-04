@@ -7,5 +7,78 @@ body.admin-bar{
 }
 
 
+.editors-wrap {
+	padding-top:40px;
+	padding-bottom:40px;
+	background:#231f20;
+	box-shadow:inset 0 0 50px 0 rgba(0,0,0,0.5);
+	color:#b3d5db;
+	font-weight:bold;
+}
+
+
+.city-wrap {
+	//background is set inline in html
+	display:block;
+	position:relative;
+	background-position:center center;
+	background-size:cover;
+	background-repeat: no-repeat;
+	background-blend-mode: multiply;
+	color: #b3d5db;
+	a {
+		color: #b3d5db;
+
+		&:visited {
+			color: #b3d5db;
+		}
+		&:hover,
+		&:focus,
+		&:active {
+			color: #b3d5db;
+		}
+	}
+	&:before{
+		content:"";
+		display:block;
+		position:absolute;
+		top:0;
+		bottom:0;
+		left:0;
+		right:0;
+		background-image:linear-gradient( rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5) );
+		background-blend-mode: multiply;
+	}
+
+	&:hover:before{
+		background-image:linear-gradient( rgba(248, 90, 66, 0.5), rgba(248, 90, 66, 0.5) );
+		background-blend-mode: multiply;
+	}
+
+}
+
+.city-wrap:hover {
+	color:white;
+
+	a {
+		color: #ffffff;
+
+		&:visited {
+			color: #ffffff;
+		}
+		&:hover,
+		&:focus,
+		&:active {
+			color: #ffffff;
+		}
+	}
+	h1{
+		color:white;
+	}
+}
+
+
+
+
 
 
