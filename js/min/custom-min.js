@@ -1,1 +1,1 @@
-$(document).ready(function(){}),$(window).load(function(){}),$(document).ready(function(){$("#site-navigation").meanmenu(),$("article.city .entry-content a").click(function(n){n.stopPropagation()})});
+$(document).ready(function(){}),$(window).load(function(){$(".flexslider").flexslider({animation:"slide",controlNav:!1,prevText:"",nextText:""})}),$(document).ready(function(){$("#site-navigation").meanmenu(),$("article.city .entry-content a").click(function(n){n.stopPropagation()})});

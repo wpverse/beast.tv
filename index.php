@@ -12,50 +12,34 @@
  */
 
 get_header(); ?>
+<?php
+$slide_args = array(
+	'post_type' => 'home-slides'
+	);
+$slides = new WP_Query($slide_args);
 
-<div id="primary" class="container content-area">
-	<main id="main" class="row site-main" role="main">
+?>
+<div id="primary" class="content-area">
+	<main id="main" class="site-main flexslider-container" role="main">
+			<div class="flexslider">
+				<?php if ( $slides->have_posts() ) : ?>
+					<ul class="slides">
+						<?php /* Start the Loop */ ?>
+						<?php while ( $slides->have_posts() ) : $slides->the_post(); ?>
 
-
-		<?php if ( is_active_sidebar( 'right-sidebar' ) ) { ?>
-		<div class="col-md-9">
-			<?php } else { ?>
-			<div class="col-md-12">
-				<?php } ?>
-
-
-				<?php if ( have_posts() ) : ?>
-
-					<?php /* Start the Loop */ ?>
-					<?php while ( have_posts() ) : the_post(); ?>
-
-						<?php
-					/* Include the Post-Format-specific template for the content.
-					 * If you want to override this in a child theme, then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
-					get_template_part( 'template-parts/content', get_post_format() );
-					?>
-
-				<?php endwhile; ?>
-
-				<?php the_posts_navigation(); ?>
-
-			<?php else : ?>
-
-				<?php get_template_part( 'template-parts/content', 'none' ); ?>
-
-			<?php endif; ?>
-		</div>
-
-
-		<?php if ( is_active_sidebar( 'right-sidebar' ) ) { ?>
-		<div id="secondary" class="col-md-3 widget-area" role="complementary">
-			<?php dynamic_sidebar( 'right-sidebar' ); ?>
-		</div><!-- #secondary -->
-		<?php } ?>
-
-	</main><!-- #main -->
+							<?php
+							$post_thumbnail_id = get_post_thumbnail_id();
+							$img_src = wp_get_attachment_image_src($post_thumbnail_id  , 'hd-background');
+							$img_url = $img_src[0];
+							?>
+							<li <?php post_class('home-slide'); ?> style="background-image:url('<?php echo $img_url; ?>');">
+<div class="slide-title"><?php the_title();?></div>
+							</li>
+						<?php endwhile; ?>
+					</ul>				
+				<?php endif; ?>
+			</div><!-- flexslider -->
+	</main><!-- #main .site-main .flexslider-container-->
 </div><!-- #primary -->
 
 <?php get_footer(); ?>

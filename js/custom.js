@@ -6,9 +6,14 @@
 
 
  });
- $( window ).load(function() {
-  // 
-});
+ $(window).load(function() {
+ 	$('.flexslider').flexslider({
+ 		animation: "slide",
+ 		controlNav:false,
+ 		prevText: "",
+ 		nextText: ""
+ 	});
+ });
 
  $(document).ready(function () {
  	$('#site-navigation').meanmenu();

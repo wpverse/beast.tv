@@ -252,39 +252,6 @@ register_post_type( 'city', $city_args );
 }
 
 
-//add_action( 'init', 'create_city_taxonomy', 0 );
-
-// create two taxonomies, Citys and Locations for the post type "book"
-function create_city_taxonomy() {
-  // Portfolio City taxonomy, make it hierarchical (like cities)
-	$labels = array(
-		'name'              => _x( 'Cities', 'taxonomy general name' ),
-		'singular_name'     => _x( 'City', 'taxonomy singular name' ),
-		'search_items'      => __( 'Search Cities' ),
-		'all_items'         => __( 'All Cities' ),
-		'parent_item'       => __( 'Parent City' ),
-		'parent_item_colon' => __( 'Parent City:' ),
-		'edit_item'         => __( 'Edit City' ),
-		'update_item'       => __( 'Update City' ),
-		'add_new_item'      => __( 'Add New City' ),
-		'new_item_name'     => __( 'New City Name' ),
-		'menu_name'         => __( 'City' ),
-		);
-
-	$args = array(
-		'hierarchical'      => true,
-		'labels'            => $labels,
-		'show_ui'           => true,
-		'show_admin_column' => true,
-		'query_var'         => true,
-		'rewrite'           => array( 'slug' => 'city' ),
-		);
-
-	register_taxonomy( 'city', array( 'portfolio','user','sales-contact' ), $args );
-
-}
-
-
 /**
  * Register widget area.
  *
@@ -311,6 +278,7 @@ function beast_scripts() {
 	$version = $my_theme->get( 'Version' );
 
 	wp_enqueue_style( 'bootstrap', get_template_directory_uri().'/css/bootstrap.css' );
+		wp_enqueue_style( 'flexslider-style', get_template_directory_uri().'/css/flexslider.css' );
 	wp_enqueue_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' );
 	wp_enqueue_style( 'beast-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'meanmenu-style', get_template_directory_uri().'/css/meanmenu.min.css' );
@@ -325,6 +293,7 @@ function beast_scripts() {
 	}
 	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), $version, true );
 	wp_enqueue_script( 'beast-custom', get_template_directory_uri() . '/js/custom.js', array('jquery'), $version, true );
+		wp_enqueue_script( 'flexslider', get_template_directory_uri() . '/js/jquery.flexslider-min.js', array('jquery'), '1.3.3', true );
 	//wp_enqueue_script( 'beast-navigation', get_template_directory_uri() . '/js/navigation.js', array(), $version, true );
 	wp_enqueue_script( 'beast-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), $version, true );
 	wp_enqueue_script( 'meanmenu', get_template_directory_uri() . '/js/jquery.meanmenu.min.js', array('jquery'), $version, true );

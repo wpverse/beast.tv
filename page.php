@@ -38,6 +38,12 @@ get_header(); ?>
 
 
 
+			<?php if ( is_active_sidebar( 'right-sidebar' ) ) { ?>
+			<div id="secondary" class="col-md-3 widget-area" role="complementary">
+				<?php dynamic_sidebar( 'right-sidebar' ); ?>
+			</div><!-- #secondary -->
+			<?php } ?>
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
