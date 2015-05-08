@@ -13,7 +13,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-<link rel="stylesheet" type="text/css" href="//cloud.typography.com/6564154/679368/css/fonts.css" />
+	<link rel="stylesheet" type="text/css" href="//cloud.typography.com/6564154/679368/css/fonts.css" />
 	<?php wp_head(); ?>
 </head>
 
@@ -29,7 +29,9 @@
 						</a>
 					<!-- h1 class="site-title"><a href="<?php //echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php //bloginfo( 'name' ); ?></a></h1>
 					<h2 class="site-description"><?php //bloginfo( 'description' ); ?></h2 -->
-						<a id="menu-stack" href="#site-navigation" class="right-side collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="site-navigation"><i class="fa fa-bars fa-3x"></i></a>					
+						<a id="menu-stack" href="#site-navigation" class="right-side collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="site-navigation">
+							<img height="85" width="115" src="<?php echo get_template_directory_uri(); ?>/images/menu-stack_115x85.png">
+						</a>					
 					</div>
 
 				</div><!-- .site-branding -->
