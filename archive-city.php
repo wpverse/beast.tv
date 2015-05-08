@@ -11,6 +11,18 @@ get_header(); ?>
 <!-- <?php echo __FILE__; ?> -->
 <div id="primary" class="content-area">
 	<main id="main" class="site-main" role="main">
+		<div class="container">	
+			<div id="city-navigation" class="archive-navigation" role="navigation">
+
+				<div class="row">
+					<div class="col-sm-10 col-sm-offset-1">
+						<div class="menu-wrap">
+							<h1 class="page-title">Editors</h1>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!-- #city-navigation -->
 		<div id="city-accordion" class="city-archive-wrap">
 			<?php if ( have_posts() ) : ?>
 				<!-- header class="page-header">

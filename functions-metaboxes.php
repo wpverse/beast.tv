@@ -53,6 +53,26 @@ function beast_register_demo_metabox() {
 // here we start the real ones. Remove only the 2 above.
 
 
+	$beast_portfolio = new_cmb2_box( array(
+		'id'            => $prefix . 'client-metabox',
+		'title'         => __( 'Client Info', 'cmb2' ),
+		'object_types'  => array('portfolio'), // Post type
+		'context'       => 'side',
+		'priority'      => 'default',
+		'show_names'    => true, // Show field names on the left
+		'new_user_section' => 'add-new-user', // where form will show on new user page. 'add-existing-user' is only other valid option.
+		// 'cmb_styles' => false, // false to disable the CMB stylesheet
+		// 'closed'     => true, // true to keep the metabox closed by default
+		) );
+	$beast_portfolio->add_field( array(
+		'name'     => __( 'Client name', 'cmb2' ),
+		'desc'     => __( 'field description (optional)', 'cmb2' ),
+		'id'       => $prefix . 'client',
+		'type'     => 'text',
+		'on_front' => false,
+		) );
+
+
 
 	$beast_user_city = new_cmb2_box( array(
 		'id'            => $prefix . 'user_city',
@@ -67,7 +87,7 @@ function beast_register_demo_metabox() {
 		) );
 
 	$beast_user_city->add_field( array(
-		'name'     => __( 'Custom info from theme', 'cmb2' ),
+		'name'     => __( 'Portfolio details for Editor', 'cmb2' ),
 		'desc'     => __( 'field description (optional)', 'cmb2' ),
 		'id'       => $prefix . 'user_info',
 		'type'     => 'title',
@@ -93,6 +113,16 @@ function beast_register_demo_metabox() {
 		'type'     => 'multicheck',
 		'options' =>  $city_term_array,
 		) );
+
+
+
+	$beast_user_city->add_field( array(
+		'name' => __( 'Editor Portfolio Title Image', 'cmb2' ),
+		'desc' => __( 'Upload an image or enter a URL.', 'cmb2' ),
+		'id'   => $prefix . 'user_image',
+		'type' => 'file',
+	) );
+
 
 }
 

@@ -7,15 +7,16 @@
 	padding-right:40px;
 
 	@include garamond;
-
+overflow:hidden;
 	.menu-wrap {
-		display: table;
+		//display: table;
 		width:100%;
 		ul#primary-menu{
-			display:table-row;
+			display:block;
 			width:100%;
 			li{
-				display:table-cell;
+				display:inline-block;
+				margin-right:30px;
 			}
 		}
 
