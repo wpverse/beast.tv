@@ -634,19 +634,34 @@ html {
 
 .header-wrap {
   background-color: #96d0da;
+  display: block;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  box-shadow: 0 0 30px 0 black; }
+
+.home .header-wrap {
+  background-color: #96d0da;
   position: fixed;
   z-index: 999;
   width: 100%;
   box-shadow: 0 0 30px 0 black; }
 
+#header-nav {
+  display: block;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  background-color: #96d0da; }
+
 #site-navigation {
-  line-height: 130px; }
+  line-height: 100px; }
 
 #city-navigation, #author-navigation {
   display: block;
   position: relative;
-  height: 130px;
-  line-height: 130px;
+  height: 100px;
+  line-height: 100px;
   width: 100%;
   padding-left: 185px;
   padding-right: 40px;
@@ -654,7 +669,7 @@ html {
   background-color: #96d0da; }
   #city-navigation h1.page-title, #author-navigation h1.page-title {
     margin: 0;
-    line-height: 130px; }
+    line-height: 100px; }
 
 #site-logo {
   max-height: 62px;
@@ -667,19 +682,22 @@ html {
 #masthead .site-branding div #site-logo-wrap {
   display: block;
   position: absolute;
-  line-height: 130px;
+  line-height: 100px;
   left: 15px;
   z-index: 10; }
 
 #masthead .site-branding div #menu-stack {
   display: block;
   position: absolute;
-  line-height: 130px;
+  line-height: 100px;
   z-index: 10;
-  right: 15px; }
+  right: 15px;
+  color: #f85a42; }
+  #masthead .site-branding div #menu-stack:visited {
+    color: #f85a42; }
   #masthead .site-branding div #menu-stack .fa {
     position: relative;
-    bottom: -9px; }
+    bottom: -12px; }
 
 #masthead .site-branding div .left-side {
   left: 0; }
@@ -785,6 +803,10 @@ html {
       width: 100%;
       height: auto; }
 
+.portfolio-item h1.entry-title {
+  color: #f85a42;
+  text-transform: uppercase; }
+
 .portfolio-item .modal-body p {
   margin: 0;
   padding: 0; }
@@ -802,4 +824,30 @@ html {
       line-height: 1.2em; }
     .portfolio-item .modal-closer a .modal-closer-button span {
       display: block; }
+
+.portfolio-item .spot-title {
+  display: block;
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  color: white;
+  font-size: 1.5em;
+  text-shadow: 0 0 10px #000;
+  text-transform: uppercase;
+  font-weight: 400; }
+
+.page-template-page-contacts #page {
+  background-color: black; }
+  .page-template-page-contacts #page .producers {
+    color: #96d0da; }
+    .page-template-page-contacts #page .producers h2 {
+      color: white; }
+  .page-template-page-contacts #page a {
+    color: #96d0da; }
+    .page-template-page-contacts #page a:visited {
+      color: #96d0da; }
+  .page-template-page-contacts #page .entry-content {
+    margin-top: 0; }
+  .page-template-page-contacts #page .entry-header h3.entry-title a {
+    color: #f85a42; }
 /*# sourceMappingURL=style.css.map */

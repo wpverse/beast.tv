@@ -78,11 +78,11 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : g
 									<header class="entry-header"><h1 class="entry-title">
 										<?php the_title(); ?>
 									</h1>
-									<?php if ( 'post' == get_post_type() ) : ?>
-										<div class="entry-meta">
-											<?php beast_posted_on(); ?>
-										</div><!-- .entry-meta -->
-									<?php endif; ?>
+									<div class="video-meta">
+<?php $client = get_post_meta( $post->ID, '_beast_client', true ); ?>
+EDITOR: <?php echo $curauth->display_name; ?>&nbsp;&nbsp;&nbsp;CLIENT: <?php echo $client; ?>
+
+									</div>
 								</header><!-- .entry-header -->
 
 								<div class="entry-content">
@@ -96,6 +96,7 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : g
 										<div class="modal-content">
 											<div class="modal-body">
 												<?php the_content(); ?>	
+												<div class="spot-title"><?php the_title(); ?></div>
 											</div>
 											<div class="modal-closer">
 
