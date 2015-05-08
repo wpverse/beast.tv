@@ -14,22 +14,22 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : g
 
 
 ?>
-
-<div id="primary" class="content-area">
-	<main id="main" class="site-main" role="main">
-		<div class="breadcrumb-wrap">
-			<div class="container">	
-				<div id="author-navigation" class="author-navigation" role="navigation">
-					<div class="row">
-						<div class="col-sm-10 col-sm-offset-1">
-							<div class="menu-wrap">
-								<h1 class="page-title"><a href="/cities">Editors</a>/<?php echo $curauth->display_name; ?></h1>
-							</div>
-						</div>
+<div id="header-nav">
+	<div class="container">	
+		<div id="author-navigation" class="author-navigation" role="navigation">
+			<div class="row">
+				<div class="col-sm-10 col-sm-offset-1">
+					<div class="menu-wrap">
+						<h1 class="page-title"><a href="/cities">Editors</a>/<?php echo $curauth->display_name; ?></h1>
 					</div>
 				</div>
-			</div><!-- #city-navigation -->
+			</div>
 		</div>
+	</div><!-- #city-navigation -->
+</div>
+<div id="primary" class="content-area">
+	<main id="main" class="site-main" role="main">
+
 		<div class="portfolio-background">
 			<div class="container">
 
@@ -79,8 +79,8 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : g
 										<?php the_title(); ?>
 									</h1>
 									<div class="video-meta">
-<?php $client = get_post_meta( $post->ID, '_beast_client', true ); ?>
-EDITOR: <?php echo $curauth->display_name; ?>&nbsp;&nbsp;&nbsp;CLIENT: <?php echo $client; ?>
+										<?php $client = get_post_meta( $post->ID, '_beast_client', true ); ?>
+										EDITOR: <?php echo $curauth->display_name; ?>&nbsp;&nbsp;&nbsp;CLIENT: <?php echo $client; ?>
 
 									</div>
 								</header><!-- .entry-header -->
@@ -102,7 +102,7 @@ EDITOR: <?php echo $curauth->display_name; ?>&nbsp;&nbsp;&nbsp;CLIENT: <?php ech
 
 												<a href="#" type="button" class="modal-closer-button" data-dismiss="modal">
 													<span class="fa-stack fa-lg">
-													<i class="fa fa-circle fa-stack-2x"></i>
+														<i class="fa fa-circle fa-stack-2x"></i>
 														<i class="fa fa-times-circle fa-stack-2x"></i>
 														
 													</span>
