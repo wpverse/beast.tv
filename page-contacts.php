@@ -31,7 +31,7 @@ get_header(); ?>
 		<div class="container producers">
 			<div class="row">
 				<div class="col-md-12">
-					<h2>Executive Producers</h2>
+					<h2 class="garamond">Executive Producers</h2>
 					<div class="row">
 						<?php 
 						$producers_args = array(
@@ -79,6 +79,63 @@ get_header(); ?>
 					</div>
 				</div>
 			</div>
+
+
+
+
+
+<div class="container producers sales">
+			<div class="row">
+				<div class="col-md-12">
+					<h2 class="garamond">Sales</h2>
+					<div class="row">
+						<?php 
+						$producers_args = array(
+							'post_type' => 'sales-contact',
+							'posts_per_page' => -1,
+							);
+						$producers = new WP_Query($producers_args);
+						while ( $producers->have_posts() ) : $producers->the_post(); ?>
+
+						<article id="post-<?php the_ID(); ?>" <?php post_class('col-md-4'); ?>>
+							<header class="entry-header">
+								<?php the_title( sprintf( '<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+
+								<?php if ( 'post' == get_post_type() ) : ?>
+									<div class="entry-meta">
+										<?php beast_posted_on(); ?>
+									</div><!-- .entry-meta -->
+								<?php endif; ?>
+							</header><!-- .entry-header -->
+
+							<div class="entry-content">
+								<?php
+								/* translators: %s: Name of current post */
+								the_content( sprintf(
+									__( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'beast' ),
+									the_title( '<span class="screen-reader-text">"', '"</span>', false )
+									) );
+									?>
+
+									<?php
+									wp_link_pages( array(
+										'before' => '<div class="page-links">' . __( 'Pages:', 'beast' ),
+										'after'  => '</div>',
+										) );
+										?>
+									</div><!-- .entry-content -->
+
+									<footer class="entry-footer">
+										<?php beast_entry_footer(); ?>
+									</footer><!-- .entry-footer -->
+								</article><!-- #post-## -->
+
+							<?php endwhile; // end of the loop. ?>
+						</div>
+					</div>
+				</div>
+			</div>
+
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

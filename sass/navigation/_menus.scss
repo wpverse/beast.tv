@@ -5,11 +5,9 @@
 	width: 100%;
 	padding-left:185px;
 	padding-right:40px;
-
 	@include garamond;
-overflow:hidden;
+	overflow:hidden;
 	.menu-wrap {
-		//display: table;
 		width:100%;
 		ul#primary-menu{
 			display:block;
@@ -19,119 +17,107 @@ overflow:hidden;
 				margin-right:30px;
 			}
 		}
-
 	}
 
 	ul {
-		//display: none;
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
-
 		ul {
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 			float: left;
 			position: absolute;
-			//top: 1.5em;
-			//left: -999em;
 			display:none;
-			//z-index: 99999;
-
 			ul {
-				//left: -999em;
 				display:none;
 				top: 0;
 			}
-
 			li {
 				&:hover > ul,
 				&.focus > ul {
-					//left: 100%;
 					display:block;
 				}
 			}
-
 			a {
 				width: 200px;
 				padding:5px 10px;
-				//background-color:#ffffff;
 				color:white;
 				&:visited {
 					color:white;
 				}
 			}
-
 			:hover > a,
 			.focus > a {
 			}
-
 			a:hover,
 			a.focus {
-
 			}
 		}
-
 		li:hover > ul,
 		li.focus > ul {
-					//left: 100%;
-					display:block;
-				}
-			}
-			li {
-				//float: left;
-				//position: relative;
-text-align:center;
-				&:hover > a,
-				&.focus > a {
-							//background-color:#EEEEEE;
-						}
-					}
-					a {
-						display: block;
-						text-decoration: none;
-						//padding:0 30px 0 0;
-						color:white;
-						&:visited {
-							color:white;
-						}
-						font-size:30px;
-					}
-
-					.current_page_item > a,
-					.current-menu-item > a,
-					.current_page_ancestor > a {
-					}
-				}
-
-/* Small menu. */
+			display:block;
+		}
+	}
+	li {
+		text-align:center;
+		&:hover > a,
+		&.focus > a {
+		}
+	}
+	a {
+		display: block;
+		text-decoration: none;
+		color:white;
+		&:visited {
+			color:white;
+		}
+		font-size:30px;
+	}
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a {
+	}
+}
 .menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
 }
+@media screen and (max-width: 1000px) {
 
-@media screen and (min-width: 37.5em) {
-	.menu-toggle {
-		display: none;
+	.main-navigation{
+		a{
+			font-size:3vw;
+		}
 	}
+
 	.main-navigation ul {
 		display: block;
 	}
 }
-
+@media screen and (max-width: 767px) {
+	#site-navigation{
+		display:none;
+	}
+	#site-logo {
+		display:block;
+		position:relative;
+		top:60px;
+	}
+	#page #masthead .site-branding div #menu-stack{
+		display:none;
+	}
+}
 .comment-navigation,
 .posts-navigation,
 .post-navigation {
-
 	.site-main & {
 		margin: 0 0 1.5em;
 		overflow: hidden;
 	}
-
 	& .nav-previous {
 		float: left;
 		width: 50%;
 	}
-
 	& .nav-next {
 		float: right;
 		text-align: right;

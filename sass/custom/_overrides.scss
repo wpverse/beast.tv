@@ -1,8 +1,8 @@
 
 $header_height: 100px;
 
-body.admin-bar{
-	//margin-top:46px;
+body #wpadminbar{
+	//top:-46px;
 }
 @media screen and (min-width:783px){
 	//margin-top:32px;
@@ -13,14 +13,24 @@ body.admin-bar{
 }
 
 
-html, body {
+body.page-template-default  #content {
+	background-color:black;
+	color:white;
+}
+
+html{
 	height:100%;
 	min-height:100%;
 	font-family:$font__main;
 	font-weight:300;
+	body {
+		height:auto;
+
+	}
+	body.home {
+		height:100%;
+	}
 }
-
-
 
 
 
@@ -29,6 +39,7 @@ body{
 	//background:black;
 	margin:0;
 	padding:0;
+	height:100%;
 }
 
 html {
@@ -69,23 +80,25 @@ html {
 			color: #96d0da;
 		}
 	}
-	&:before{
-		content:"";
+	.hover-image {
 		display:block;
 		position:absolute;
+		width:100%;
+		height:100%;
 		top:0;
-		bottom:0;
 		left:0;
-		right:0;
-		background-image:linear-gradient( rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5) );
-		background-blend-mode: multiply;
+		background-position:center center;
+		background-size:cover;
+		background-repeat: no-repeat;
+		opacity:0;
+		&:hover{
+			opacity:1;
+		}
 	}
 
-	&:hover:before{
-		background-image:linear-gradient( rgba(248, 90, 66, 0.5), rgba(248, 90, 66, 0.5) );
-		background-blend-mode: multiply;
+	&:hover .hover-image {
+		opacity:1;
 	}
-
 }
 
 .city-wrap:hover {
@@ -119,6 +132,7 @@ html {
 
 #page{
 	background-color:#96d0da;
+	height:100%;
 }
 
 .clickable{
@@ -179,6 +193,38 @@ html {
 }
 
 
+
+
+@media screen and (max-width: 767px) {
+
+	.header-wrap {
+		display:none;
+	}
+	.home .header-wrap {
+		display:none;
+	}
+	#page #content #header-nav{
+		display:block;
+		position:relative;
+		margin-top:65px;
+	}
+
+	body.mean-container .mean-bar {
+
+		background: url("images/logo_198_63.png") no-repeat 20px 10px;
+		background-size: auto 50px;
+		@include garamond;
+	}
+	#primary.content-area {
+		padding-top:0;
+	}
+
+
+}
+
+
+
+
 #primary-menu {
 	color:#f85a42;
 	a{
@@ -192,7 +238,6 @@ html {
 
 #site-navigation {
 	line-height:$header_height;
-
 }
 
 #city-navigation,#author-navigation {
@@ -209,6 +254,33 @@ html {
 		margin:0;
 		line-height:100px;
 	}
+}
+
+
+@media screen and (max-width: 767px) {
+
+
+	#page #content #header-nav{
+		background-color: #231f20;
+	}
+
+	#city-navigation,#author-navigation {
+		display:block;
+		position:relative;
+		height:$header_height;
+		line-height:$header_height;
+		width: 100%;
+		padding-left:0;
+		padding-right:0;
+		@include garamond;
+		background-color: #231f20;
+		h1.page-title{
+			margin:0;
+			line-height:100px;
+		}
+	}
+
+
 }
 
 
@@ -324,12 +396,24 @@ html {
 		}
 	}
 } 
-
-
 .flexslider .slides img {width: auto;
 	height: 100%;
 	display: block;
 }
+@media screen and (max-width: 767px) {
+	.flexslider .slides > li .slide-title	{
+		font-size:5.5vw;
+		line-height:6vw;
+	}
+
+
+}
+
+
+
+
+
+
 
 .post-type-archive-city {
 
@@ -344,10 +428,12 @@ html {
 	.entry-content {
 		a.email {
 			display:block;
-			border:2px solid white;
+			border:2px solid #96d0da;
 			padding: 5px 30px 5px 15px;
 			content:"Email";
 			width:150px;
+			text-align:center;
+			font-weight:bold;
 		}
 	}
 }
@@ -449,10 +535,16 @@ html {
 }
 .page-template-page-contacts #page #content {
 	background-color: black;
+	height:100%;
+	.sales {
+		margin-top:40px;
+	}
 	.producers{
 
 		h2{
 			color:white;
+			margin-top:35px;
+			margin-bottom:0px;
 		}
 		color:#96d0da;
 	}
@@ -466,8 +558,12 @@ html {
 		margin-top:0;
 	}
 	.entry-header{
-		h3.entry-title a{
+		h3.entry-title{
+			margin-bottom:0;			
+		} a{
 			color:#f85a42;
+			//font-weight:bold;
+
 		}
 	}
 }
@@ -478,6 +574,5 @@ html {
 .home #primary {
 	padding-top:0;
 }
-
 
 
