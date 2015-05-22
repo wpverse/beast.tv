@@ -53,6 +53,24 @@ function beast_register_demo_metabox() {
 // here we start the real ones. Remove only the 2 above.
 
 
+	$beast_slides = new_cmb2_box( array(
+		'id'            => $prefix . 'slides-metabox',
+		'title'         => __( 'custom', 'cmb2' ),
+		'object_types'  => array('home-slides'), // Post type
+		'context'       => 'normal',
+		'priority'      => 'default',
+		'show_names'    => true, // Show field names on the left
+		) );
+	$beast_slides->add_field( array(
+		'name'     => __( 'Link slide title to:', 'cmb2' ),
+		'desc'     => __( '', 'cmb2' ),
+		'id'       => $prefix . 'client',
+		'type'     => 'text',
+		'on_front' => false,
+		) );
+
+
+
 	$beast_portfolio = new_cmb2_box( array(
 		'id'            => $prefix . 'client-metabox',
 		'title'         => __( 'Client Info', 'cmb2' ),
@@ -60,9 +78,7 @@ function beast_register_demo_metabox() {
 		'context'       => 'side',
 		'priority'      => 'default',
 		'show_names'    => true, // Show field names on the left
-		'new_user_section' => 'add-new-user', // where form will show on new user page. 'add-existing-user' is only other valid option.
-		// 'cmb_styles' => false, // false to disable the CMB stylesheet
-		// 'closed'     => true, // true to keep the metabox closed by default
+
 		) );
 	$beast_portfolio->add_field( array(
 		'name'     => __( 'Client name', 'cmb2' ),
@@ -91,6 +107,28 @@ function beast_register_demo_metabox() {
 		'desc'     => __( 'field description (optional)', 'cmb2' ),
 		'id'       => $prefix . 'user_info',
 		'type'     => 'title',
+		'on_front' => false,
+		) );
+
+
+
+	$beast_city_image = new_cmb2_box( array(
+		'id'            => $prefix . 'user_city_image',
+		'title'         => __( 'Additional Image', 'cmb2' ),
+		'object_types'  => array('city'), // Post type
+		'context'       => 'side',
+		'priority'      => 'default',
+		'show_names'    => true, // Show field names on the left
+		'new_user_section' => 'add-new-user', // where form will show on new user page. 'add-existing-user' is only other valid option.
+		// 'cmb_styles' => false, // false to disable the CMB stylesheet
+		// 'closed'     => true, // true to keep the metabox closed by default
+		) );
+
+	$beast_city_image->add_field( array(
+		'name'     => __( 'Hover featured image', 'cmb2' ),
+		'desc'     => __( '', 'cmb2' ),
+		'id'       => $prefix . 'hover_image',
+		'type'     => 'file',
 		'on_front' => false,
 		) );
 
