@@ -18,7 +18,7 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : g
 	<div class="container">	
 		<div id="author-navigation" class="author-navigation" role="navigation">
 			<div class="row">
-				<div class="col-sm-10 col-sm-offset-1">
+				<div class="col-xs-10 col-xs-offset-1">
 					<div class="menu-wrap">
 						<h1 class="page-title"><a href="/cities">Editors</a>/<?php echo $curauth->display_name; ?></h1>
 					</div>
@@ -87,7 +87,7 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : g
 
 								<div class="entry-content">
 									<a href="#" data-toggle="modal" data-target="#modal-<?php echo $post->ID; ?>">
-										<?php echo get_the_post_thumbnail( $post->ID, 'full' ); ?>
+										<?php echo get_the_post_thumbnail( $post->ID, 'sixteen_nine_background' ); ?>
 									</a>
 								</div><!-- .entry-content -->
 								<?php } ?>
