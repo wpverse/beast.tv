@@ -43,7 +43,7 @@ get_header(); ?>
 					// the bootstrap accordian behavior is unfortunately dependent on the accordian groups being wrapped in a .panel element. It is rather silly. But it's a bug/feature we have to work around. We also need to reset the unwanted css for .panel
 					?>
 					<div class="panel">
-
+						<div id="<?php echo $post->post_name; ?>" class="city-anchor-offset" data-link-target="post-<?php the_ID(); ?>"></div>
 						<div <?php post_class('city-wrap clickable'); ?> style=" background-image:url('<?php echo $img_url; ?>');"
 							data-parent="#city-accordion"  data-toggle="collapse" data-target="#city-<?php echo $post->post_name; ?>" aria-expanded="false" aria-controls="city-<?php echo $post->post_name; ?>">
 							<div class="hover-image" style="background-image:url('<?php echo $hover_image_url; ?>');"></div>

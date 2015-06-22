@@ -630,6 +630,7 @@ html {
     color: white; }
 
 #city-accordion .panel {
+  position: relative;
   margin: 0;
   background: none;
   border: none;
@@ -1098,5 +1099,10 @@ article.portfolio-item:hover .modal-hover {
   background-color: rgba(0, 0, 0, 0.2); }
   .editor-thumb .hover-overlay:hover {
     background-color: transparent; }
+
+.city-anchor-offset {
+  display: block;
+  position: absolute;
+  top: -110px; }
 
 /*# sourceMappingURL=style.css.map */

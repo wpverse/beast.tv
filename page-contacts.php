@@ -45,8 +45,9 @@ get_header(); ?>
 
 						<article id="post-<?php the_ID(); ?>" <?php post_class('col-xs-12 col-xs-offset-0 col-sm-6 col-sm-offset-0 col-md-4 col-md-offset-0'); ?>>
 							<header class="entry-header">
-								<?php the_title( sprintf( '<h3 class="entry-title">', esc_url( get_permalink() ) ), '</h3>' ); ?>
-
+							<a href="<?php echo home_url(); ?>/cities#<?php echo $post->post_name; ?>">
+									<?php the_title( sprintf( '<h3 class="entry-title">', esc_url( get_permalink() ) ), '</h3>' ); ?>
+								</a>
 								<?php if ( 'post' == get_post_type() ) : ?>
 									<div class="entry-meta">
 										<?php beast_posted_on(); ?>
