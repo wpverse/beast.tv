@@ -88,7 +88,8 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : g
 								</header><!-- .entry-header -->
 
 								<div class="entry-content">
-									<a href="#" data-toggle="modal" data-target="#modal-<?php echo $post->ID; ?>">
+									<a class="editor-thumb" href="#" data-toggle="modal" data-target="#modal-<?php echo $post->ID; ?>">
+									<div class="hover-overlay"></div>
 										<?php echo get_the_post_thumbnail( $post->ID, 'sixteen_nine_background' ); ?>
 									</a>
 								</div><!-- .entry-content -->

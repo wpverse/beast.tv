@@ -1015,6 +1015,9 @@ article.portfolio-item:hover .modal-hover {
           transition: opacity 100ms; }
 
 @media screen and (max-width: 767px) {
+  .video-meta {
+    font-size: 0.7em; }
+
   .flex-direction-nav {
     display: none; }
 
@@ -1075,11 +1078,25 @@ article.portfolio-item:hover .modal-hover {
 .video-meta {
   display: block;
   max-width: 100%;
-  font-size: 0.7em; }
+  font-size: 1em; }
   .video-meta span {
     display: block;
     position: relative;
     max-width: 100%;
     white-space: nowrap; }
+
+.editor-thumb .hover-overlay {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.2); }
+  .editor-thumb .hover-overlay:hover {
+    background-color: transparent; }
 
 /*# sourceMappingURL=style.css.map */
