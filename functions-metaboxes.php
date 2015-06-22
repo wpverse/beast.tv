@@ -27,9 +27,7 @@ function beast_register_demo_metabox() {
 	// Start with an underscore to hide fields from custom fields list
 	$prefix = '_beast_';
 
-	/**
-	 * Sample metabox to demonstrate each field type included
-	 */
+
 	$beast_demo = new_cmb2_box( array(
 		'id'            => $prefix . 'metabox',
 		'title'         => __( 'Test Metabox', 'cmb2' ),
@@ -50,6 +48,27 @@ function beast_register_demo_metabox() {
 		) );
 
 
+
+	$beast_sales_contact = new_cmb2_box( array(
+		'id'            => $prefix . 'sales-contact',
+		'title'         => __( 'Test Metabox', 'cmb2' ),
+		'object_types'  => array( 'sales-contact' ), // Post type
+		'context'       => 'side',
+		'priority'      => 'default',
+		'show_names'    => true, // Show field names on the left
+		// 'cmb_styles' => false, // false to disable the CMB stylesheet
+		// 'closed'     => true, // true to keep the metabox closed by default
+		) );
+
+	$beast_sales_contact->add_field( array(
+		'name' => __( 'Contact order', 'cmb2' ),
+		'desc' => __( 'Assign a priority number to reorder Sales Contacts', 'cmb2' ),
+		'id'   => $prefix . 'sales_contact_order',
+		'type' => 'text_small',
+		// 'repeatable' => true,
+		) );
+
+
 // here we start the real ones. Remove only the 2 above.
 
 
@@ -64,7 +83,7 @@ function beast_register_demo_metabox() {
 	$beast_slides->add_field( array(
 		'name'     => __( 'Link slide title to:', 'cmb2' ),
 		'desc'     => __( '', 'cmb2' ),
-		'id'       => $prefix . 'client',
+		'id'       => $prefix . 'home_link',
 		'type'     => 'text',
 		'on_front' => false,
 		) );

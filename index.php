@@ -21,24 +21,39 @@ $slides = new WP_Query($slide_args);
 ?>
 <div id="primary" class="content-area">
 	<main id="main" class="site-main flexslider-container" role="main">
-			<div class="flexslider">
-				<?php if ( $slides->have_posts() ) : ?>
-					<ul class="slides">
-						<?php /* Start the Loop */ ?>
-						<?php while ( $slides->have_posts() ) : $slides->the_post(); ?>
+		<div class="flexslider">
+			<?php if ( $slides->have_posts() ) : ?>
+				<ul class="slides">
+					<?php /* Start the Loop */ ?>
+					<?php while ( $slides->have_posts() ) : $slides->the_post(); ?>
+
+						<?php
+						$post_thumbnail_id = get_post_thumbnail_id();
+						$img_src = wp_get_attachment_image_src($post_thumbnail_id  , 'hd-background');
+						$img_url = $img_src[0];
+						?>
+
+						<li <?php post_class('home-slide'); ?> style="background-image:url('<?php echo $img_url; ?>');">
+							<?php $home_link = get_post_meta( $post->ID, '_beast_home_link', true ); ?>
 
 							<?php
-							$post_thumbnail_id = get_post_thumbnail_id();
-							$img_src = wp_get_attachment_image_src($post_thumbnail_id  , 'hd-background');
-							$img_url = $img_src[0];
-							?>
-							<li <?php post_class('home-slide'); ?> style="background-image:url('<?php echo $img_url; ?>');">
-<div class="slide-title"><?php the_title();?></div>
+							if ($home_link) {
+								echo '<a class="slide-title" href="'.$home_link.'">';
+								?>
+								<div class=""><?php the_title();?></div>
 							</li>
-						<?php endwhile; ?>
-					</ul>				
-				<?php endif; ?>
-			</div><!-- flexslider -->
+
+							<?php echo '</a>';
+
+						} else { ?>
+
+						<div class="slide-title"><?php the_title();?></div>
+
+						<?php } ?>
+					<?php endwhile; ?>
+				</ul>				
+			<?php endif; ?>
+		</div><!-- flexslider -->
 	</main><!-- #main .site-main .flexslider-container-->
 </div><!-- #primary -->
 

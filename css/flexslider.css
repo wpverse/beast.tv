@@ -281,12 +281,12 @@ html[xmlns] .slides {
 
 .flex-direction-nav .flex-prev, .flexslider:hover .flex-prev {
   opacity: 1;
-  left: 20%;
+  left: 10%;
 }
 
 .flex-direction-nav .flex-next, .flexslider:hover .flex-next {
   opacity: 1;
-  right: 20%;
+  right: 10%;
 }
 
 /*# sourceMappingURL=flexslider.css.map */

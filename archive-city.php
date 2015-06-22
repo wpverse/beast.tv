@@ -15,7 +15,7 @@ get_header(); ?>
 			<div class="row">
 				<div class="col-xs-10 col-xs-offset-1">
 					<div class="menu-wrap">
-						<h1 class="page-title">Editors <span class="caret"></span><span id="breadcrumb-city"></span></h1>
+						<h1 class="page-title">Editors <span class="breadcrumb-caret"></span>> <span id="breadcrumb-city"></span></h1>
 					</div>
 				</div>
 			</div>
@@ -35,38 +35,32 @@ get_header(); ?>
 					$img_src = wp_get_attachment_image_src($post_thumbnail_id  , 'hd-background');
 					$img_url = $img_src[0];
 					$hover_image_id = get_post_meta( $post->ID, '_beast_hover_image_id', true );
-					print_r($hover_image_id);
+					//print_r($hover_image_id);
 					$hover_img = wp_get_attachment_image_src( $hover_image_id  , 'hd-background');
-					print_r($hover_img);
+					//print_r($hover_img);
 					$hover_image_url = $hover_img[0];
-					print_r($hover_image_url);
+					//print_r($hover_image_url);
 					// the bootstrap accordian behavior is unfortunately dependent on the accordian groups being wrapped in a .panel element. It is rather silly. But it's a bug/feature we have to work around. We also need to reset the unwanted css for .panel
 					?>
 					<div class="panel">
 
-						<div <?php post_class('city-wrap clickable'); ?> style="background-image:url('<?php echo $img_url; ?>');"
+						<div <?php post_class('city-wrap clickable'); ?> style=" background-image:url('<?php echo $img_url; ?>');"
 							data-parent="#city-accordion"  data-toggle="collapse" data-target="#city-<?php echo $post->post_name; ?>" aria-expanded="false" aria-controls="city-<?php echo $post->post_name; ?>">
 							<div class="hover-image" style="background-image:url('<?php echo $hover_image_url; ?>');"></div>
 							<div class="container">
 								<div class="row city-content">
 									<div class="col-md-12">
 										<article id="post-<?php the_ID(); ?>" <?php post_class('row'); ?>>
-											<header class="entry-header col-sm-8">
+											<header class="entry-header col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-0">
 												<h1 class="entry-title"><?php the_title(); ?></h1>
 											</header><!-- .entry-header -->
-											<div class="entry-content col-sm-4">
+											<!-- div class="entry-content col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-0">
 												<?php
 												/* translators: %s: Name of current post */
-												the_content( sprintf(
-													__( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'beast' ),
-													the_title( '<span class="screen-reader-text">"', '"</span>', false )
-													) );
-												wp_link_pages( array(
-													'before' => '<div class="page-links">' . __( 'Pages:', 'beast' ),
-													'after'  => '</div>',
-													) );
+												//the_content( sprintf( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'beast' ), the_title( '<span class="screen-reader-text">"', '"</span>', false ) 	) );
+												//wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'beast' ), 'after'  => '</div>', ) );
 													?>
-												</div><!-- .entry-content -->
+												</div --><!-- .entry-content -->
 												<footer class="entry-footer">
 													<?php beast_entry_footer(); ?>
 												</footer><!-- .entry-footer -->
@@ -75,7 +69,7 @@ get_header(); ?>
 									</div>
 								</div><!-- end container -->
 							</div><!-- post classes and city-wrap -->
-							<div id="city-<?php echo $post->post_name; ?>" class="collapse">
+							<div id="city-<?php echo $post->post_name; ?>" data-name="<?php echo $post->post_name; ?>" class="collapse">
 								<div class="editors-wrap">
 									<div class="container">
 										<div class="row editors-listed">

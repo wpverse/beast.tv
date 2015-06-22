@@ -178,7 +178,7 @@ $contact_args = array(
 	'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'revisions')
 	);
 
-register_post_type( 'sales-contactmean', $contact_args );
+register_post_type( 'sales-contact', $contact_args );
 
 
 $city_labels = array(
@@ -342,8 +342,6 @@ function reorder_cities( $query ) {
 	}
 }
 add_action( 'pre_get_posts', 'reorder_cities' );
-
-
 
 
 
