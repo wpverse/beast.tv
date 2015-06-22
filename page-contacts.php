@@ -45,7 +45,7 @@ get_header(); ?>
 
 						<article id="post-<?php the_ID(); ?>" <?php post_class('col-xs-12 col-xs-offset-0 col-sm-6 col-sm-offset-0 col-md-4 col-md-offset-0'); ?>>
 							<header class="entry-header">
-								<?php the_title( sprintf( '<h3 class="entry-title">', esc_url( get_permalink() ) ), '</h1>' ); ?>
+								<?php the_title( sprintf( '<h3 class="entry-title">', esc_url( get_permalink() ) ), '</h3>' ); ?>
 
 								<?php if ( 'post' == get_post_type() ) : ?>
 									<div class="entry-meta">
@@ -100,7 +100,7 @@ get_header(); ?>
 
 							<article id="post-<?php the_ID(); ?>" <?php post_class('col-xs-12 col-xs-offset-0 col-sm-6 col-sm-offset-0 col-md-4 col-md-offset-0'); ?>>
 								<header class="entry-header">
-									<?php the_title( sprintf( '<h3 class="entry-title">', esc_url( get_permalink() ) ), '</h1>' ); ?>
+									<?php the_title( sprintf( '<h3 class="entry-title">', esc_url( get_permalink() ) ), '</h3>' ); ?>
 
 									<?php if ( 'post' == get_post_type() ) : ?>
 										<div class="entry-meta">
