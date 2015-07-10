@@ -1,27 +1,27 @@
 <?php
 /**
- * The template for author archive.
- *
- * Learn more: http://codex.wordpress.org/Template_Hierarchy
+ * Template Name: single portfolio
  *
  * @package Neochrome BeastTV
  */
 
 get_header(); 
+$post_id = get_queried_object_id();
+$post_author_id = get_post_field( 'post_author', $post_id );
+$author_name = get_the_author_meta( 'display_name' , $post_author_id );
 
-
-$curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author));
+//$curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author));
 
 
 ?>
-<!-- arthor.php -->
+<!-- page-portfolio.php -->
 <div id="header-nav">
 	<div class="container">	
 		<div id="author-navigation" class="author-navigation" role="navigation">
 			<div class="row">
 				<div class="col-xs-10 col-xs-offset-1">
 					<div class="menu-wrap">
-						<h1 class="page-title"><a href="<?php echo home_url( '/' ); ?>cities">Editors</a>><?php echo $curauth->display_name; ?></h1>
+						<h1 class="page-title"><a href="<?php echo home_url( '/' ); ?>cities">Editors</a>><?php echo $author_name; ?></h1>
 					</div>
 				</div>
 			</div>
@@ -51,16 +51,8 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : g
 				<div class="row">
 					<div class="col-md-12">
 						<?php
-						$portfolio_args = array(
-							'post_type' => 'portfolio',
-							'posts_per_page' => '15',
-							'author' => $curauth->ID
-							);
-						$portfolios = new WP_Query($portfolio_args);
 
-
-
-						if ( $portfolios->have_posts() ) : ?>
+						if ( have_posts() ) : ?>
 
 						<header class="page-header">
 
@@ -71,7 +63,7 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : g
 						</header><!-- .page-header -->
 
 						<?php /* Start the Loop */ ?>
-						<?php while ( $portfolios->have_posts() ) : $portfolios->the_post(); ?>
+						<?php while ( have_posts() ) : the_post(); ?>
 
 							<?php if (has_post_thumbnail($post_id)){
 								?>
@@ -97,18 +89,19 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : g
 									</h1>
 
 
-
 									<div class="video-meta">
 										<?php $client = get_post_meta( $post->ID, '_beast_client', true ); ?>
-										<span>EDITOR: <?php echo $curauth->display_name; ?>&nbsp;&nbsp;&nbsp;</span><span>CLIENT: <?php echo $client; ?></span>
+										<span>EDITOR: <?php echo $author_name ?>&nbsp;&nbsp;&nbsp;</span><span>CLIENT: <?php echo $client; ?></span>
 									</div>
 
 
 								</header><!-- .entry-header -->
 								<?php } ?>
-								<div class="test-tracking">API message: <span class="status">api status message</span></div>
+								<div class="test-tracking"><span class="status">status message</span></div>
 							</article><!-- #post-## -->
+	
 
+<div class="vid-author-link">Select another video from <span class="author-name"><?php the_author_posts_link(); ?></span></div>
 						<?php endwhile; ?>
 
 					<?php endif; ?>
@@ -121,3 +114,10 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : g
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
+
+
+
+
+
+
+

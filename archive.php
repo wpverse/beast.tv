@@ -8,7 +8,7 @@
  */
 
 get_header(); ?>
-
+<!-- archive.php -->
 <div id="primary" class="container content-area">
 	<main id="main" class="row site-main" role="main">
 		<div class="col-md-12">

@@ -40,7 +40,7 @@
 				</div><!-- .site-branding -->
 
 
-				<nav id="site-navigation" class="main-navigation " style="display:none;">
+				<nav id="site-navigation" class="main-navigation displace" style="display:none;">
 					<div class="row">
 						<div class="col-sm-10 col-sm-offset-1">
 							<div class="menu-wrap">

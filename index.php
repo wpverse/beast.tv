@@ -31,30 +31,39 @@ $slides = new WP_Query($slide_args);
 						$post_thumbnail_id = get_post_thumbnail_id();
 						$img_src = wp_get_attachment_image_src($post_thumbnail_id  , 'hd-background');
 						$img_url = $img_src[0];
+
+						$home_link = get_post_meta( $post->ID, '_beast_home_link', true );
+							//$lightbox_link = get_post_meta( $post->ID, '_beast_lightbox_link', true );
+
+
 						?>
 
 						<li <?php post_class('home-slide'); ?> style="background-image:url('<?php echo $img_url; ?>');">
-							<?php $home_link = get_post_meta( $post->ID, '_beast_home_link', true ); ?>
+							<?php if ($home_link){ ?>
 
-							<?php
-							if ($home_link) {
-								echo '<a class="slide-title" href="'.$home_link.'">';
-								?>
+							<a class="slide-link" href="<?php echo $home_link ?>"></a>
+
+							<?php } ?>
+
+							<?php if ($home_link) { ?>
+
+							<a class="slide-title" href="<?php echo $home_link ?>">
 								<div class=""><?php the_title();?></div>
-							</li>
+							</a>
 
-							<?php echo '</a>';
+							<?php	} else { ?>
 
-						} else { ?>
+							<div class="slide-title"><?php the_title();?></div>
 
-						<div class="slide-title"><?php the_title();?></div>
+							<?php } ?>
 
-						<?php } ?>
+						</li>
 					<?php endwhile; ?>
 				</ul>				
 			<?php endif; ?>
 		</div><!-- flexslider -->
 	</main><!-- #main .site-main .flexslider-container-->
+
 </div><!-- #primary -->
 
 <?php get_footer(); ?>

@@ -155,6 +155,21 @@ html {
 
 
 
+#page {
+
+
+	.header-wrap{
+
+
+	}
+
+	#content{
+
+	}
+
+
+}
+
 
 .header-wrap {
 	background-color:rgba(150, 208, 218, 1);
@@ -163,7 +178,7 @@ html {
 	width:100%;	
 	//left:0;
 	//top:0;
-	z-index:999;
+	z-index:101;
 
 	transition: background-color 0.5s ease;
 
@@ -181,7 +196,7 @@ html {
 	position:fixed;
 	//left:0;
 	//top:0;
-	z-index:999;
+	z-index:101;
 	width:100%;
 
 	transition: background-color 0.5s ease;
@@ -319,8 +334,14 @@ html {
 }
 
 
-#site-navigation {
+#site-navigation{
+	position:relative;
 	line-height:$header_height;
+
+	&.displace{
+		top:-100px;
+		height:0 !important;
+	}
 }
 
 #city-navigation,#author-navigation {
@@ -333,11 +354,20 @@ html {
 	padding-right:40px;
 	@include garamond;
 	background-color: #96d0da;
-	h1.page-title{
-		margin:0;
-		line-height:100px;
-		white-space: nowrap;
+	.menu-wrap {
+		display:block;
+		position:relative;
+
+		h1.page-title{
+			display:block;
+			position: absolute;
+			margin:0;
+			line-height:100px;
+			white-space: nowrap;
+			z-index:9999;
+		}	
 	}
+
 }
 
 
@@ -465,25 +495,35 @@ html {
 	border: 0px solid;
 	overflow: hidden;
 	.slides > li {
+		position:relative;
 		background-size: cover; 
 		background-position: center;
 		height: 100%;
 		width: 100%;
 		display: none; 
 		-webkit-backface-visibility:hidden;
+		z-index:1;
+		.slide-link{
+			display:block;
+			position:absolute;
+			width:100%;
+			height:100%;
+			z-index:40;
+		}
 		.slide-title{
 			display:block;
-			position:relative;
+			position:absolute;
 			top:50%;
-			left:0;
-			width:100%;
+			left:15%;
+			width:70%;
 			text-align:center;
 			transform: translateY(-50%);
 			//transform: translateX(-50%);
 			color:white;
-			z-index:50;
 			font-size:3.0em;
-			line-height:4em;
+			line-height:1.5em;
+			z-index:50;
+			//outline:1px solid green;
 		}
 	}
 } 
@@ -497,6 +537,10 @@ html {
 		line-height:6vw;
 	}
 
+	body.archive.author .portfolio-background header.page-header h1.editor-title {
+		font-size:24px;
+		left:20px;
+	}
 
 }
 
@@ -559,50 +603,102 @@ html {
 	background-color: #96d0da;
 }
 
-.archive.author .portfolio-background{
-	background-color:#231f20;
-	color:white;
-	header.page-header{
-		display:block;
-		position:relative;
-		border:none;
-		margin-top:0;
-		img{
-			width:100%;
-			height:auto;
+.archive.author, .single-portfolio{
+	#page {
+		background-color:rgb(35,31,32);
+	}
 
-		}
-		h1.editor-title{
+	.portfolio-background{
+		background-color:#231f20;
+		color:white;
+		header.page-header{
 			display:block;
-			position:absolute;
-			margin:0;
-			padding:0;
-			left:40px;
-			bottom:40px;
-		}
-	} 
-	.portfolio-item {
-		display:block;
-		position:relative;
-
-		.entry-header{
-			display:block;
-			position:absolute;
-			margin:0;
-			padding:0;
-			left:40px;
-			bottom:40px;
-		}
-		.entry-content{
+			position:relative;
+			border:none;
+			margin-top:0;
 			img{
 				width:100%;
 				height:auto;
+
 			}
+			h1.editor-title{
+				display:block;
+				position:absolute;
+				margin:0;
+				padding:0;
+				left:40px;
+				bottom:40px;
+			}
+		} 
+		.portfolio-item{
+			display:block;
+			position:relative;
+			z-index:1;
+			&:hover {
+				//outline:10px solid red;
+			}
+			& *{
+				//outline:5px solid green;
+			}
+			
+			img.vid-play {
+				display:block;
+				position:absolute;
+				width:80px;
+				height:80px;
+				left:50%;
+				top:50%;
+				transform: translate(-50%,-50%);
+				pointer-events:none;
+				opacity:0;
+				transition:opacity 500ms;
+			}
+			&:hover img.vid-play {
+				opacity:1;
+				transition:opacity 500ms;
+			}
+
+			.content-area-wrap {
+				display:block;
+				position:absolute;
+				width:100%;
+				top:0;
+				z-index:-1;
+			}
+			.entry-content{
+				z-index:50;
+				img{
+					width:100%;
+					height:auto;
+				}
+			}				
+			.entry-header{
+				display:block;
+				position:absolute;
+				margin:0;
+				padding:0;
+				left:40px;
+				bottom:40px;
+				z-index:55;
+			}
+
+		}
+
+
+
+	}
+} 
+
+
+@media screen and (max-width: 767px) { 
+	.archive.author, .single-portfolio {
+		.portfolio-background .portfolio-item img.vid-play  {
+			display:none;
 		}
 	}
 }
 
-.portfolio-item {
+.portfolio-item, .modal-content {
 	h1.entry-title{
 		color:#f85a42;
 		text-transform: uppercase;
@@ -686,22 +782,10 @@ html {
 	text-transform: capitalize;
 }
 
-.modal-hover {
-	display:block;
-	position:absolute;
-	left:50%;
-	top:50%;
-	transform: translate(-50%,-50%);
-	pointer-events:none;
-	opacity:0;
-	transition:opacity 400ms;
-}
 
 
-article.portfolio-item:hover .modal-hover {
-	opacity:1;
-	transition: opacity 100ms
-}
+
+
 
 @media screen and (max-width: 767px) {   
 
@@ -715,9 +799,9 @@ article.portfolio-item:hover .modal-hover {
 		display:none;
 	}
 
-
 	h1.page-title, h1.editor-title, h1.entry-title {
 		font-size:4vw;
+		line-height:8vw;
 	}
 
 	.archive.author .portfolio-background .portfolio-item .entry-header {
@@ -734,6 +818,7 @@ article.portfolio-item:hover .modal-hover {
 	h1, .h1, h2, .h2, h3, .h3 {
 		margin-top: 16px;
 		margin-bottom: 8px;
+
 	}
 
 
@@ -741,8 +826,18 @@ article.portfolio-item:hover .modal-hover {
 
 @media screen and (max-width: 570px) { 
 
-	h1.page-title, h1.editor-title, h1.entry-title {
+article.portfolio-item {
+	margin-top:-25px;
+}
+
+.single-portfolio .portfolio-background .portfolio-item .entry-header {
+  left: 20px;
+  bottom: 20px;
+}
+
+#page .menu-wrap	h1.page-title, h1.editor-title, h1.entry-title {
 		font-size:20px;
+		//line-height:60px ;
 	}
 
 	#city-navigation,#author-navigation {
@@ -786,15 +881,12 @@ article.portfolio-item:hover .modal-hover {
 		transition: all 0.5s ease;
 	}
 }
-.slide-link{
-	display:block;
-	//height:100%;
-}
+
 
 .video-meta {
 	display:block;
 	max-width:100%;
-	font-size:1em;
+	font-size:0.8em;
 	span{
 		display:block;
 		position:relative;
@@ -814,8 +906,10 @@ article.portfolio-item:hover .modal-hover {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-color:rgba(0,0,0,0.2);
+	transition:all 500ms;
 	&:hover{
 		background-color:rgba(0,0,0,0);
+		transition:all 500ms;
 	}
 }
 
@@ -824,6 +918,20 @@ article.portfolio-item:hover .modal-hover {
 	position:absolute;
 	top:-110px;
 }
-
-
+.vid-author-link {
+	font-size:1.3em;
+	margin-top:20px;
+	color:#f85a42;
+	.author-name{
+		font-weight:bold;
+		white-space: nowrap;
+	}
+}
+.test-tracking{
+	display:block;
+	position:absolute;
+	bottom:-24px;
+	left:0;
+	//display:none;
+}
 

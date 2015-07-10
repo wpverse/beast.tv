@@ -23,7 +23,14 @@
 
 <?php wp_footer(); ?>
 <script>
-
+$('.modal').on('shown.bs.modal', function () {
+	console.log('pause slider');
+  $('.flexslider').flexslider("pause");
+});
+$('.modal').on('hidden.bs.modal', function () {
+	console.log('play slider');
+  $('.flexslider').flexslider("play");
+});
 </script>
 </body>
 </html>

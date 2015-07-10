@@ -180,6 +180,40 @@ $contact_args = array(
 
 register_post_type( 'sales-contact', $contact_args );
 
+$manager_labels = array(
+		'name'               => _x( 'Managers', 'post type general name', '_beast' ),
+		'singular_name'      => _x( 'Manager', 'post type singular name', '_beast' ),
+		'menu_name'          => _x( 'Managers', 'admin menu', '_beast' ),
+		'name_admin_bar'     => _x( 'Manager', 'add new on admin bar', '_beast' ),
+		'add_new'            => _x( 'Add New', 'Manager', '_beast' ),
+		'add_new_item'       => __( 'Add New Manager', '_beast' ),
+		'new_item'           => __( 'New Manager', '_beast' ),
+		'edit_item'          => __( 'Edit Manager', '_beast' ),
+		'view_item'          => __( 'View Manager', '_beast' ),
+		'all_items'          => __( 'All Managers', '_beast' ),
+		'search_items'       => __( 'Search Managers', '_beast' ),
+		'parent_item_colon'  => __( 'Parent Managers:', '_beast' ),
+		'not_found'          => __( 'No Managers found.', '_beast' ),
+		'not_found_in_trash' => __( 'No Managers found in Trash.', '_beast' )
+		);
+
+$manager_args = array(
+	'labels'             => $manager_labels,
+	'public'             => true,
+	'publicly_queryable' => true,
+	'show_ui'            => true,
+	'show_in_menu'       => true,
+	'query_var'          => true,
+	'rewrite'            => array( 'slug' => 'manager' ),
+	'capability_type'    => 'post',
+	'has_archive'        => true,
+	'hierarchical'       => false,
+	'menu_position'      => null,
+	'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'revisions')
+	);
+
+register_post_type( 'manager', $manager_args );
+
 
 $city_labels = array(
 	'name'               => _x( 'Cities', 'post type general name', '_beast' ),
@@ -298,6 +332,11 @@ function beast_scripts() {
 	wp_enqueue_script( 'beast-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), $version, true );
 	wp_enqueue_script( 'meanmenu', get_template_directory_uri() . '/js/jquery.meanmenu.min.js', array('jquery'), $version, true );
 	wp_enqueue_script( 'matchHeight', get_template_directory_uri() . '/js/jquery.matchHeight-min.js', array('jquery'), $version, true );
+wp_enqueue_script( 'fitvids', get_template_directory_uri() . '/js/jquery.fitvids.js', array('jquery'), $version, true );
+
+// Do not call 'froogaloop', use modified name. WP froogaloop library does not have vimeo fix update yet.
+wp_enqueue_script( 'froogaloopNew', get_stylesheet_directory_uri() . '/js/froogaloop.js', array('jquery'), $version, true );
+
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -344,6 +383,29 @@ function reorder_cities( $query ) {
 add_action( 'pre_get_posts', 'reorder_cities' );
 
 
+function vimeo_processing($content){
 
+$player_url = str_replace( "https://vimeo.com/" , "https://player.vimeo.com/video/" ,$content );
 
+// Width and height are needed for correct aspect ratio even though we don't use those sizes.
+$content = '<iframe src="'.$player_url.'?api=1" width="640" height="360" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>';
+//testing
 
+write_log("$player_url: ".$player_url);
+write_log("$content: ".$content);
+
+return $content;
+}
+add_filter( 'the_content', 'vimeo_processing',5 );
+
+if (!function_exists('write_log')) {
+    function write_log ( $log )  {
+        if ( true === WP_DEBUG ) {
+            if ( is_array( $log ) || is_object( $log ) ) {
+                error_log( print_r( $log, true ) );
+            } else {
+                error_log( $log );
+            }
+        }
+    }
+}

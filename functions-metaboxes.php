@@ -47,7 +47,7 @@ function beast_register_demo_metabox() {
 		// 'repeatable' => true,
 		) );
 
-
+// here we start the real ones. Remove only the 2 above.
 
 	$beast_sales_contact = new_cmb2_box( array(
 		'id'            => $prefix . 'sales-contact',
@@ -69,24 +69,32 @@ function beast_register_demo_metabox() {
 		) );
 
 
-// here we start the real ones. Remove only the 2 above.
+
 
 
 	$beast_slides = new_cmb2_box( array(
 		'id'            => $prefix . 'slides-metabox',
-		'title'         => __( 'custom', 'cmb2' ),
+		'title'         => __( 'Slide Options', 'cmb2' ),
+
 		'object_types'  => array('home-slides'), // Post type
 		'context'       => 'normal',
 		'priority'      => 'default',
 		'show_names'    => true, // Show field names on the left
 		) );
 	$beast_slides->add_field( array(
+		'name' => 'Instructions',
+		'desc' => 'You may add a link to the slide title or provide a Vimeo url to pop up a lightbox when the title is clicked on. If both are filed out, only the the lightbox link will be used',
+		'type' => 'title',
+		'id'   => 'wiki_test_title'
+		) );
+	$beast_slides->add_field( array(
 		'name'     => __( 'Link slide title to:', 'cmb2' ),
-		'desc'     => __( '', 'cmb2' ),
+		'desc'     => __( 'Privide a custom link for the title.', 'cmb2' ),
 		'id'       => $prefix . 'home_link',
 		'type'     => 'text',
 		'on_front' => false,
 		) );
+
 
 
 
@@ -178,7 +186,7 @@ function beast_register_demo_metabox() {
 		'desc' => __( 'Upload an image or enter a URL.', 'cmb2' ),
 		'id'   => $prefix . 'user_image',
 		'type' => 'file',
-	) );
+		) );
 
 
 }

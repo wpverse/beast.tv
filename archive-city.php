@@ -55,11 +55,7 @@ get_header(); ?>
 												<h1 class="entry-title"><?php the_title(); ?></h1>
 											</header><!-- .entry-header -->
 											<!-- div class="entry-content col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-0">
-												<?php
-												/* translators: %s: Name of current post */
-												//the_content( sprintf( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'beast' ), the_title( '<span class="screen-reader-text">"', '"</span>', false ) 	) );
-												//wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'beast' ), 'after'  => '</div>', ) );
-													?>
+
 												</div --><!-- .entry-content -->
 												<footer class="entry-footer">
 													<?php beast_entry_footer(); ?>
@@ -69,12 +65,12 @@ get_header(); ?>
 									</div>
 								</div><!-- end container -->
 							</div><!-- post classes and city-wrap -->
-							<div id="city-<?php echo $post->post_name; ?>" data-name="<?php echo $post->post_name; ?>" class="collapse">
+							<div id="city-<?php echo $post->post_name; ?>" data-name="<?php echo $post->post_title; ?>" class="collapse">
 								<div class="editors-wrap">
 									<div class="container">
 										<div class="row editors-listed">
 											<?php
-								//print_r($post);
+
 											$test_val = serialize(strval($post->ID));
 											$user_args = array('role' => 'Author', 'meta_key' => '_beast_user_cities','meta_value' => $test_val, 'meta_compare' => 'like'	);
 											$user_query = get_users( $user_args );
