@@ -27,7 +27,7 @@ get_header(); ?>
 <div id="primary" class=" content-area">
 	<main id="main" class=" site-main" role="main">
 
-<div class="container producers">
+		<div class="container producers">
 			<div class="row">
 				<div class="col-md-12">
 					<h2 class="garamond">Beast Management</h2>
@@ -45,7 +45,7 @@ get_header(); ?>
 						<article id="post-<?php the_ID(); ?>" <?php post_class('col-xs-12 col-xs-offset-0 col-sm-6 col-sm-offset-0 col-md-4 col-md-offset-0'); ?>>
 							<header class="entry-header">
 
-									<?php the_title( sprintf( '<h3 class="entry-title">', esc_url( get_permalink() ) ), '</h3>' ); ?>
+								<?php the_title( sprintf( '<h3 class="entry-title">', esc_url( get_permalink() ) ), '</h3>' ); ?>
 								
 								<?php if ( 'post' == get_post_type() ) : ?>
 									<div class="entry-meta">
@@ -55,32 +55,34 @@ get_header(); ?>
 							</header><!-- .entry-header -->
 
 							<div class="entry-content">
+								<!-- before the_content -->
 								<?php
-								/* translators: %s: Name of current post */
-								the_content( sprintf(
-									__( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'beast' ),
-									the_title( '<span class="screen-reader-text">"', '"</span>', false )
+								
+								the_content();
+								//the_content( sprintf(
+									//__( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'beast' ),
+									//the_title( '<span class="screen-reader-text">"', '"</span>', false )
+									//) );
+								?>
+								<!-- after the_content -->
+								<?php
+								wp_link_pages( array(
+									'before' => '<div class="page-links">' . __( 'Pages:', 'beast' ),
+									'after'  => '</div>',
 									) );
 									?>
+								</div><!-- .entry-content -->
 
-									<?php
-									wp_link_pages( array(
-										'before' => '<div class="page-links">' . __( 'Pages:', 'beast' ),
-										'after'  => '</div>',
-										) );
-										?>
-									</div><!-- .entry-content -->
+								<footer class="entry-footer">
+									<?php beast_entry_footer(); ?>
+								</footer><!-- .entry-footer -->
+							</article><!-- #post-## -->
 
-									<footer class="entry-footer">
-										<?php beast_entry_footer(); ?>
-									</footer><!-- .entry-footer -->
-								</article><!-- #post-## -->
-
-							<?php endwhile; // end of the loop. ?>
-						</div>
+						<?php endwhile; // end of the loop. ?>
 					</div>
 				</div>
 			</div>
+		</div>
 
 
 		<div class="container producers">
@@ -100,7 +102,7 @@ get_header(); ?>
 
 						<article id="post-<?php the_ID(); ?>" <?php post_class('col-xs-12 col-xs-offset-0 col-sm-6 col-sm-offset-0 col-md-4 col-md-offset-0'); ?>>
 							<header class="entry-header">
-							<a href="<?php echo home_url(); ?>/cities/#<?php echo $post->post_name; ?>">
+								<a href="<?php echo home_url(); ?>/cities/#<?php echo $post->post_name; ?>">
 									<?php the_title( sprintf( '<h3 class="entry-title">', esc_url( get_permalink() ) ), '</h3>' ); ?>
 								</a>
 								<?php if ( 'post' == get_post_type() ) : ?>

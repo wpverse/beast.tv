@@ -634,6 +634,7 @@ html {
 			display:block;
 			position:relative;
 			z-index:1;
+			margin-top:1.5em;
 			&:hover {
 				//outline:10px solid red;
 			}
@@ -663,8 +664,20 @@ html {
 				position:absolute;
 				width:100%;
 				top:0;
+				
+			}
+
+			.vid-down{
 				z-index:-1;
 			}
+			.vid-pause{
+				z-index:50;
+			}
+			.vid-up{
+				z-index:100;
+			}
+
+
 			.entry-content{
 				z-index:50;
 				img{
@@ -826,16 +839,16 @@ html {
 
 @media screen and (max-width: 570px) { 
 
-article.portfolio-item {
-	margin-top:-25px;
-}
+	article.portfolio-item {
+		margin-top:-25px;
+	}
 
-.single-portfolio .portfolio-background .portfolio-item .entry-header {
-  left: 20px;
-  bottom: 20px;
-}
+	.single-portfolio .portfolio-background .portfolio-item .entry-header {
+		left: 20px;
+		bottom: 20px;
+	}
 
-#page .menu-wrap	h1.page-title, h1.editor-title, h1.entry-title {
+	#page .menu-wrap	h1.page-title, h1.editor-title, h1.entry-title {
 		font-size:20px;
 		//line-height:60px ;
 	}
@@ -928,10 +941,31 @@ article.portfolio-item {
 	}
 }
 .test-tracking{
-	display:block;
+	//display:block;
 	position:absolute;
 	bottom:-24px;
 	left:0;
+	display:none;
+}
+
+#main .portfolio-sets {
+	padding-bottom:35px;
+
+}
+
+.attachment-sixteen_nine_background{
 	//display:none;
 }
 
+.portfolio-item .entry-content {
+	display:block;
+	
+	.helper {
+
+	}
+}
+@media screen and (min-width: 767px) {
+	article.portfolio-item	{
+		min-height:400px;
+	}
+}

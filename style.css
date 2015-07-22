@@ -951,7 +951,8 @@ html {
   .archive.author .portfolio-background .portfolio-item, .single-portfolio .portfolio-background .portfolio-item {
     display: block;
     position: relative;
-    z-index: 1; }
+    z-index: 1;
+    margin-top: 1.5em; }
     .archive.author .portfolio-background .portfolio-item img.vid-play, .single-portfolio .portfolio-background .portfolio-item img.vid-play {
       display: block;
       position: absolute;
@@ -974,8 +975,13 @@ html {
       display: block;
       position: absolute;
       width: 100%;
-      top: 0;
+      top: 0; }
+    .archive.author .portfolio-background .portfolio-item .vid-down, .single-portfolio .portfolio-background .portfolio-item .vid-down {
       z-index: -1; }
+    .archive.author .portfolio-background .portfolio-item .vid-pause, .single-portfolio .portfolio-background .portfolio-item .vid-pause {
+      z-index: 50; }
+    .archive.author .portfolio-background .portfolio-item .vid-up, .single-portfolio .portfolio-background .portfolio-item .vid-up {
+      z-index: 100; }
     .archive.author .portfolio-background .portfolio-item .entry-content, .single-portfolio .portfolio-background .portfolio-item .entry-content {
       z-index: 50; }
       .archive.author .portfolio-background .portfolio-item .entry-content img, .single-portfolio .portfolio-background .portfolio-item .entry-content img {
@@ -1160,9 +1166,19 @@ html {
     white-space: nowrap; }
 
 .test-tracking {
-  display: block;
   position: absolute;
   bottom: -24px;
-  left: 0; }
+  left: 0;
+  display: none; }
+
+#main .portfolio-sets {
+  padding-bottom: 35px; }
+
+.portfolio-item .entry-content {
+  display: block; }
+
+@media screen and (min-width: 767px) {
+  article.portfolio-item {
+    min-height: 400px; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -19,68 +19,145 @@
  $( document ).ready(function() {
 
 
-    $("#main").fitVids();
-
-
-
-    $(".editor-thumb").click(function(event){
-     event.preventDefault();
-     var base = $(this).data('base');
-     console.log("Base: "+base);
-     var player = $(base+' iframe')[0];
-     console.log("CLICK editor-thumb:")
-     console.log("player:"+player);
-     console.log("base: "+base);
-     $(base+' .content-area-wrap').css('z-index',100);
-
-     Froogaloop(player).api('play');
-
- });
-
-
-
-    $("article.portfolio-item").each(function() {
-
-console.log("marker-01");
-        var base = $(this).attr('id');
-        console.log("Base: "+base);
-        var iframe = $("#"+base+" .content-area-wrap iframe");
-        var player = $f(iframe);
-        var status = $('#'+base+' .status');
-
-        console.log('Each player js binding setup:');
-        console.log("base: #"+base);
-        console.log("iframe: ");
-        console.log(iframe);
-        console.log("player: ");
-        console.log(player);
-        console.log("status: ");
-        console.log(status);
-console.log("marker-02");
-    // When the player is ready, add listeners for pause, finish, and playProgress
-    player.addEvent('ready', function() {
-        status.text('ready');
-        
-        player.addEvent('pause', onPause);
-        player.addEvent('finish', onFinish);
-        player.addEvent('playProgress', onPlayProgress);
+    $(function() {
+        $("img.lazy").lazyload({
+            threshold : 400
+        });
     });
 
-console.log("marker-03");
-    function onPause(id) {
-        status.text('paused');
+
+    $("#main").fitVids();
+
+    var currentItem = "";
+
+    $(".editor-thumb").click(function(event){
+       event.preventDefault();
+       var base = $(this).data('base');
+       currentItem = base;
+
+       console.log("Base: "+base);
+       var player = $(base+' iframe')[0];
+       console.log("CLICK editor-thumb:")
+       console.log("CLICK player:"+player);
+       console.log("CLICK Base: "+base);
+       console.log("CLICK currentItem: "+currentItem);
+
+       $(base+' .content-area-wrap').removeClass('vid-down');
+       $(base+' .content-area-wrap').addClass('vid-up');
+
+       Froogaloop(player).api('play');
+
+   });
+
+
+
+
+
+    $("article.portfolio-item").each(function() { 
+
+        var base = $(this).attr('id');
+        console.log("Base: ");
+        console.log(base);
+        var player = $("#"+base+" .content-area-wrap iframe");
+        var playerOrigin = '*';
+        var status = $('#'+base+' .status');
+
+    // Listen for messages from the player
+    if (window.addEventListener) {
+        window.addEventListener('message', onMessageReceived, false);
     }
-console.log("marker-04");
-    function onFinish(id) {
-        status.text('finished');
-        $("#"+base+" .content-area-wrap").css('z-index','1');
+    else {
+        window.attachEvent('onmessage', onMessageReceived, false);
     }
-console.log("marker-05");
-    function onPlayProgress(data, id) {
-        status.text(data.seconds + 's played');
+
+    // Handle messages received from the player
+    function onMessageReceived(event) {
+        // Handle messages from the vimeo player only
+        if (!(/^https?:\/\/player.vimeo.com/).test(event.origin)) {
+            return false;
+        }
+        //console.log("playerOrigin: ");
+        //console.log(playerOrigin);
+        //console.log("event: ");
+        //console.log(event);     
+        //console.log("event.data: ");
+        //console.log(event.data);     
+
+        if (playerOrigin === '*') {
+            playerOrigin = event.origin;
+        }
+        
+        var data = JSON.parse(event.data);
+        
+        switch (data.event) {
+            case 'ready':
+            onReady();
+            break;
+            
+            case 'playProgress':
+            onPlayProgress(data.data);
+            break;
+            
+            case 'pause':
+            onPause();
+            break;
+            
+            case 'finish':
+            onFinish();
+            break;
+        }
     }
-console.log("marker-06");
-})
+
+
+    // Helper function for sending a message to the player
+    function post(action, value) {
+        var data = {
+          method: action
+      };
+      
+      if (value) {
+        data.value = value;
+    }
+    
+    var message = JSON.stringify(data);
+    player[0].contentWindow.postMessage(data, playerOrigin);
+}
+
+function onReady() {
+    status.text('ready');
+    
+    post('addEventListener', 'pause');
+    post('addEventListener', 'finish');
+    post('addEventListener', 'playProgress');
+}
+
+function onPause() {
+    status.text('paused');
+    console.log("$f currentItem: "+currentItem);
+    $(currentItem+' .content-area-wrap').removeClass('vid-up').addClass('vid-pause');
+
+}
+
+function onFinish() {
+    status.text('finished');
+
+    $(currentItem+' .content-area-wrap').removeClass('vid-up vid-pause').addClass('vid-down');
+
+}
+
+function onPlayProgress(data) {
+    status.text(data.seconds + 's played');
+    $(currentItem+' .content-area-wrap').addClass('vid-up');
+
+}
+
+});
+
+
+
+
+
+
 
 
 
@@ -92,44 +169,44 @@ console.log("marker-06");
 var setScreenWidth = '767';
 
 $('.page-template-page-contacts .type-city').matchHeight({
-   byRow: true,
-   property: 'height',
-   target: null,
-   remove: false
+ byRow: true,
+ property: 'height',
+ target: null,
+ remove: false
 });
 $('.page-template-page-contacts .type-sales-contact').matchHeight({
-   byRow: true,
-   property: 'height',
-   target: null,
-   remove: false
+ byRow: true,
+ property: 'height',
+ target: null,
+ remove: false
 });
 
 $('#site-navigation').meanmenu({
-   meanScreenWidth: setScreenWidth,
-   meanMenuClose: "<span></span><span></span><span></span>",
+ meanScreenWidth: setScreenWidth,
+ meanMenuClose: "<span></span><span></span><span></span>",
 });
 
 $('article.city .entry-content a').click(function(event){
-   event.stopPropagation();
+ event.stopPropagation();
 });
 
 $('.collapse').on('hide.bs.collapse', function() {
-   $("#breadcrumb-city").fadeOut();
+ $("#breadcrumb-city").fadeOut();
 });
 
 $('.collapse').on('shown.bs.collapse', function() {
-   var section = $(this).attr('id');
-   var name = $(this).data('name');
-   console.log('section opened: '+section);
-   console.log('name opened: '+name);
-   $("#breadcrumb-city").html( name ).hide().fadeIn();
+ var section = $(this).attr('id');
+ var name = $(this).data('name');
+ console.log('section opened: '+section);
+ console.log('name opened: '+name);
+ $("#breadcrumb-city").html( name ).hide().fadeIn();
 });
 
 $('#site-navigation > div').css('display','none');
 
 jQuery(window).resize(function(){
 
-   if ($(window).width() > 767) {
+ if ($(window).width() > 767) {
     $('#site-navigation > div').css('display','none');
 } else {
     $('#site-navigation > div').css('display','block');
@@ -139,9 +216,9 @@ jQuery(window).resize(function(){
 
 
 $("#menu-stack").click( function(){
-   $('#site-navigation').toggleClass("displace");
-   $('#site-navigation > div').fadeToggle("slow");
-   $(".header-wrap").toggleClass("faded");
+ $('#site-navigation').toggleClass("displace");
+ $('#site-navigation > div').fadeToggle("slow");
+ $(".header-wrap").toggleClass("faded");
 });
 
 });
@@ -166,7 +243,7 @@ $(window).load(function() {
 	linkTarget = "."+linkTarget;
 	var linkTargetTwo = linkTarget + " a.editor-thumb";
 	$( linkTarget ).click();
-	console.log("linkTargetTwo: ")+linkTargetTwo;
+	console.log("linkTargetTwo: "+linkTargetTwo);
 	$( linkTargetTwo ).click();
 
 

@@ -81,8 +81,11 @@ $author_name = get_the_author_meta( 'display_name' , $post_author_id );
 									</div><!-- .entry-content -->
 
 
-									<div class="content-area-wrap">
-										<?php the_content(); ?>
+									<div class="content-area-wrap vid-down">
+										<?php
+										echo vimeo_processing(get_the_content());
+										// the_content();
+										?>
 									</div>
 									<header class="entry-header"><h1 class="entry-title">
 										<?php the_title(); ?>
@@ -99,9 +102,9 @@ $author_name = get_the_author_meta( 'display_name' , $post_author_id );
 								<?php } ?>
 								<div class="test-tracking"><span class="status">status message</span></div>
 							</article><!-- #post-## -->
-	
 
-<div class="vid-author-link">Select another video from <span class="author-name"><?php the_author_posts_link(); ?></span></div>
+
+							<div class="vid-author-link">Select another video from <span class="author-name"><?php the_author_posts_link(); ?></span></div>
 						<?php endwhile; ?>
 
 					<?php endif; ?>

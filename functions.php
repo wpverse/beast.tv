@@ -323,7 +323,10 @@ function beast_scripts() {
 		wp_deregister_script('jquery');
 		wp_register_script('jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js', false, null);
 		wp_enqueue_script('jquery');
+
 		// not currently including jquery migrate
+wp_enqueue_script( 'lazyload', get_template_directory_uri() . '/js/jquery.lazyload.js', array('jquery'), $version, true );
+
 	}
 	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), $version, true );
 	wp_enqueue_script( 'beast-custom', get_template_directory_uri() . '/js/custom.js', array('jquery'), $version, true );
@@ -396,7 +399,7 @@ write_log("$content: ".$content);
 
 return $content;
 }
-add_filter( 'the_content', 'vimeo_processing',5 );
+//add_filter( 'the_content', 'vimeo_processing',5 );
 
 if (!function_exists('write_log')) {
     function write_log ( $log )  {

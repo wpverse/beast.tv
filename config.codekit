@@ -47,16 +47,16 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/cmb2\/bootstrap.php": {
+	"\/CMB2\/bootstrap.php": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/cmb2\/bootstrap.php",
+		"inputAbbreviatedPath": "\/CMB2\/bootstrap.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/cmb2\/CHANGELOG.md": {
+	"\/CMB2\/CHANGELOG.md": {
 		"criticStyle": 0,
 		"enableFootnotes": 1,
 		"enableLabels": 1,
@@ -65,9 +65,9 @@
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/cmb2\/CHANGELOG.md",
+		"inputAbbreviatedPath": "\/CMB2\/CHANGELOG.md",
 		"maskEmailAddresses": 1,
-		"outputAbbreviatedPath": "\/cmb2\/CHANGELOG.html",
+		"outputAbbreviatedPath": "\/CMB2\/CHANGELOG.html",
 		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
@@ -77,18 +77,18 @@
 		"randomFootnoteNumbers": 0,
 		"useCompatibilityMode": 0
 		},
-	"\/cmb2\/composer.json": {
+	"\/CMB2\/composer.json": {
 		"fileType": 524288,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/cmb2\/composer.json",
+		"inputAbbreviatedPath": "\/CMB2\/composer.json",
 		"orderOutput": 0,
-		"outputAbbreviatedPath": "\/cmb2\/composer-min.json",
+		"outputAbbreviatedPath": "\/CMB2\/composer-min.json",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1
 		},
-	"\/cmb2\/CONTRIBUTING.md": {
+	"\/CMB2\/CONTRIBUTING.md": {
 		"criticStyle": 0,
 		"enableFootnotes": 1,
 		"enableLabels": 1,
@@ -97,9 +97,9 @@
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/cmb2\/CONTRIBUTING.md",
+		"inputAbbreviatedPath": "\/CMB2\/CONTRIBUTING.md",
 		"maskEmailAddresses": 1,
-		"outputAbbreviatedPath": "\/cmb2\/CONTRIBUTING.html",
+		"outputAbbreviatedPath": "\/CMB2\/CONTRIBUTING.html",
 		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
@@ -109,42 +109,42 @@
 		"randomFootnoteNumbers": 0,
 		"useCompatibilityMode": 0
 		},
-	"\/cmb2\/css\/cmb2.css": {
+	"\/CMB2\/css\/cmb2.css": {
 		"fileType": 16,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/cmb2\/css\/cmb2.css",
+		"inputAbbreviatedPath": "\/CMB2\/css\/cmb2.css",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/cmb2\/css\/cmb2.min.css": {
+	"\/CMB2\/css\/cmb2.min.css": {
 		"fileType": 16,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/cmb2\/css\/cmb2.min.css",
+		"inputAbbreviatedPath": "\/CMB2\/css\/cmb2.min.css",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/cmb2\/css\/index.php": {
+	"\/CMB2\/css\/index.php": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/cmb2\/css\/index.php",
+		"inputAbbreviatedPath": "\/CMB2\/css\/index.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/cmb2\/css\/sass\/cmb2.scss": {
+	"\/CMB2\/css\/sass\/cmb2.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/cmb2\/css\/sass\/cmb2.scss",
-		"outputAbbreviatedPath": "\/cmb2\/css\/css\/cmb2.css",
+		"inputAbbreviatedPath": "\/CMB2\/css\/sass\/cmb2.scss",
+		"outputAbbreviatedPath": "\/CMB2\/css\/css\/cmb2.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -152,24 +152,24 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/cmb2\/css\/sass\/index.php": {
+	"\/CMB2\/css\/sass\/index.php": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/cmb2\/css\/sass\/index.php",
+		"inputAbbreviatedPath": "\/CMB2\/css\/sass\/index.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/cmb2\/css\/sass\/partials\/_collapsible_ui.scss": {
+	"\/CMB2\/css\/sass\/partials\/_collapsible_ui.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/cmb2\/css\/sass\/partials\/_collapsible_ui.scss",
-		"outputAbbreviatedPath": "\/cmb2\/css\/sass\/css\/_collapsible_ui.css",
+		"inputAbbreviatedPath": "\/CMB2\/css\/sass\/partials\/_collapsible_ui.scss",
+		"outputAbbreviatedPath": "\/CMB2\/css\/sass\/css\/_collapsible_ui.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -177,15 +177,15 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/cmb2\/css\/sass\/partials\/_jquery_ui.scss": {
+	"\/CMB2\/css\/sass\/partials\/_jquery_ui.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/cmb2\/css\/sass\/partials\/_jquery_ui.scss",
-		"outputAbbreviatedPath": "\/cmb2\/css\/sass\/css\/_jquery_ui.css",
+		"inputAbbreviatedPath": "\/CMB2\/css\/sass\/partials\/_jquery_ui.scss",
+		"outputAbbreviatedPath": "\/CMB2\/css\/sass\/css\/_jquery_ui.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -193,15 +193,15 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/cmb2\/css\/sass\/partials\/_main_wrap.scss": {
+	"\/CMB2\/css\/sass\/partials\/_main_wrap.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/cmb2\/css\/sass\/partials\/_main_wrap.scss",
-		"outputAbbreviatedPath": "\/cmb2\/css\/sass\/css\/_main_wrap.css",
+		"inputAbbreviatedPath": "\/CMB2\/css\/sass\/partials\/_main_wrap.scss",
+		"outputAbbreviatedPath": "\/CMB2\/css\/sass\/css\/_main_wrap.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -209,15 +209,15 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/cmb2\/css\/sass\/partials\/_misc.scss": {
+	"\/CMB2\/css\/sass\/partials\/_misc.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/cmb2\/css\/sass\/partials\/_misc.scss",
-		"outputAbbreviatedPath": "\/cmb2\/css\/sass\/css\/_misc.css",
+		"inputAbbreviatedPath": "\/CMB2\/css\/sass\/partials\/_misc.scss",
+		"outputAbbreviatedPath": "\/CMB2\/css\/sass\/css\/_misc.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -225,15 +225,15 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/cmb2\/css\/sass\/partials\/_mixins.scss": {
+	"\/CMB2\/css\/sass\/partials\/_mixins.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/cmb2\/css\/sass\/partials\/_mixins.scss",
-		"outputAbbreviatedPath": "\/cmb2\/css\/sass\/css\/_mixins.css",
+		"inputAbbreviatedPath": "\/CMB2\/css\/sass\/partials\/_mixins.scss",
+		"outputAbbreviatedPath": "\/CMB2\/css\/sass\/css\/_mixins.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -241,15 +241,15 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/cmb2\/css\/sass\/partials\/_post_metaboxes.scss": {
+	"\/CMB2\/css\/sass\/partials\/_post_metaboxes.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/cmb2\/css\/sass\/partials\/_post_metaboxes.scss",
-		"outputAbbreviatedPath": "\/cmb2\/css\/sass\/css\/_post_metaboxes.css",
+		"inputAbbreviatedPath": "\/CMB2\/css\/sass\/partials\/_post_metaboxes.scss",
+		"outputAbbreviatedPath": "\/CMB2\/css\/sass\/css\/_post_metaboxes.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -257,15 +257,15 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/cmb2\/css\/sass\/partials\/_sidebar_placements.scss": {
+	"\/CMB2\/css\/sass\/partials\/_sidebar_placements.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/cmb2\/css\/sass\/partials\/_sidebar_placements.scss",
-		"outputAbbreviatedPath": "\/cmb2\/css\/sass\/css\/_sidebar_placements.css",
+		"inputAbbreviatedPath": "\/CMB2\/css\/sass\/partials\/_sidebar_placements.scss",
+		"outputAbbreviatedPath": "\/CMB2\/css\/sass\/css\/_sidebar_placements.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -273,15 +273,15 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/cmb2\/css\/sass\/partials\/_variables.scss": {
+	"\/CMB2\/css\/sass\/partials\/_variables.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/cmb2\/css\/sass\/partials\/_variables.scss",
-		"outputAbbreviatedPath": "\/cmb2\/css\/sass\/css\/_variables.css",
+		"inputAbbreviatedPath": "\/CMB2\/css\/sass\/partials\/_variables.scss",
+		"outputAbbreviatedPath": "\/CMB2\/css\/sass\/css\/_variables.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -289,398 +289,398 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/cmb2\/css\/sass\/partials\/index.php": {
+	"\/CMB2\/css\/sass\/partials\/index.php": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/cmb2\/css\/sass\/partials\/index.php",
+		"inputAbbreviatedPath": "\/CMB2\/css\/sass\/partials\/index.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/cmb2\/Dockunit.json": {
+	"\/CMB2\/Dockunit.json": {
 		"fileType": 524288,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/cmb2\/Dockunit.json",
+		"inputAbbreviatedPath": "\/CMB2\/Dockunit.json",
 		"orderOutput": 0,
-		"outputAbbreviatedPath": "\/cmb2\/Dockunit-min.json",
+		"outputAbbreviatedPath": "\/CMB2\/Dockunit-min.json",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1
 		},
-	"\/cmb2\/example-functions.php": {
+	"\/CMB2\/example-functions.php": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/cmb2\/example-functions.php",
+		"inputAbbreviatedPath": "\/CMB2\/example-functions.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/cmb2\/Gruntfile.js": {
+	"\/CMB2\/Gruntfile.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/cmb2\/Gruntfile.js",
-		"outputAbbreviatedPath": "\/cmb2\/min\/Gruntfile-min.js",
+		"inputAbbreviatedPath": "\/CMB2\/Gruntfile.js",
+		"outputAbbreviatedPath": "\/CMB2\/min\/Gruntfile-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/cmb2\/images\/ico-delete.png": {
+	"\/CMB2\/images\/ico-delete.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 715,
-		"inputAbbreviatedPath": "\/cmb2\/images\/ico-delete.png",
-		"outputAbbreviatedPath": "\/cmb2\/images\/ico-delete.png",
+		"inputAbbreviatedPath": "\/CMB2\/images\/ico-delete.png",
+		"outputAbbreviatedPath": "\/CMB2\/images\/ico-delete.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/cmb2\/images\/index.php": {
+	"\/CMB2\/images\/index.php": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/cmb2\/images\/index.php",
+		"inputAbbreviatedPath": "\/CMB2\/images\/index.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/cmb2\/images\/ui-bg_flat_0_aaaaaa_40x100.png": {
+	"\/CMB2\/images\/ui-bg_flat_0_aaaaaa_40x100.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 180,
-		"inputAbbreviatedPath": "\/cmb2\/images\/ui-bg_flat_0_aaaaaa_40x100.png",
-		"outputAbbreviatedPath": "\/cmb2\/images\/ui-bg_flat_0_aaaaaa_40x100.png",
+		"inputAbbreviatedPath": "\/CMB2\/images\/ui-bg_flat_0_aaaaaa_40x100.png",
+		"outputAbbreviatedPath": "\/CMB2\/images\/ui-bg_flat_0_aaaaaa_40x100.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/cmb2\/images\/ui-bg_flat_75_ffffff_40x100.png": {
+	"\/CMB2\/images\/ui-bg_flat_75_ffffff_40x100.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 178,
-		"inputAbbreviatedPath": "\/cmb2\/images\/ui-bg_flat_75_ffffff_40x100.png",
-		"outputAbbreviatedPath": "\/cmb2\/images\/ui-bg_flat_75_ffffff_40x100.png",
+		"inputAbbreviatedPath": "\/CMB2\/images\/ui-bg_flat_75_ffffff_40x100.png",
+		"outputAbbreviatedPath": "\/CMB2\/images\/ui-bg_flat_75_ffffff_40x100.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/cmb2\/images\/ui-bg_glass_55_fbf9ee_1x400.png": {
+	"\/CMB2\/images\/ui-bg_glass_55_fbf9ee_1x400.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 120,
-		"inputAbbreviatedPath": "\/cmb2\/images\/ui-bg_glass_55_fbf9ee_1x400.png",
-		"outputAbbreviatedPath": "\/cmb2\/images\/ui-bg_glass_55_fbf9ee_1x400.png",
+		"inputAbbreviatedPath": "\/CMB2\/images\/ui-bg_glass_55_fbf9ee_1x400.png",
+		"outputAbbreviatedPath": "\/CMB2\/images\/ui-bg_glass_55_fbf9ee_1x400.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/cmb2\/images\/ui-bg_glass_65_ffffff_1x400.png": {
+	"\/CMB2\/images\/ui-bg_glass_65_ffffff_1x400.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 105,
-		"inputAbbreviatedPath": "\/cmb2\/images\/ui-bg_glass_65_ffffff_1x400.png",
-		"outputAbbreviatedPath": "\/cmb2\/images\/ui-bg_glass_65_ffffff_1x400.png",
+		"inputAbbreviatedPath": "\/CMB2\/images\/ui-bg_glass_65_ffffff_1x400.png",
+		"outputAbbreviatedPath": "\/CMB2\/images\/ui-bg_glass_65_ffffff_1x400.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/cmb2\/images\/ui-bg_glass_75_dadada_1x400.png": {
+	"\/CMB2\/images\/ui-bg_glass_75_dadada_1x400.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 111,
-		"inputAbbreviatedPath": "\/cmb2\/images\/ui-bg_glass_75_dadada_1x400.png",
-		"outputAbbreviatedPath": "\/cmb2\/images\/ui-bg_glass_75_dadada_1x400.png",
+		"inputAbbreviatedPath": "\/CMB2\/images\/ui-bg_glass_75_dadada_1x400.png",
+		"outputAbbreviatedPath": "\/CMB2\/images\/ui-bg_glass_75_dadada_1x400.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/cmb2\/images\/ui-bg_glass_75_e6e6e6_1x400.png": {
+	"\/CMB2\/images\/ui-bg_glass_75_e6e6e6_1x400.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 110,
-		"inputAbbreviatedPath": "\/cmb2\/images\/ui-bg_glass_75_e6e6e6_1x400.png",
-		"outputAbbreviatedPath": "\/cmb2\/images\/ui-bg_glass_75_e6e6e6_1x400.png",
+		"inputAbbreviatedPath": "\/CMB2\/images\/ui-bg_glass_75_e6e6e6_1x400.png",
+		"outputAbbreviatedPath": "\/CMB2\/images\/ui-bg_glass_75_e6e6e6_1x400.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/cmb2\/images\/ui-bg_glass_95_fef1ec_1x400.png": {
+	"\/CMB2\/images\/ui-bg_glass_95_fef1ec_1x400.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 119,
-		"inputAbbreviatedPath": "\/cmb2\/images\/ui-bg_glass_95_fef1ec_1x400.png",
-		"outputAbbreviatedPath": "\/cmb2\/images\/ui-bg_glass_95_fef1ec_1x400.png",
+		"inputAbbreviatedPath": "\/CMB2\/images\/ui-bg_glass_95_fef1ec_1x400.png",
+		"outputAbbreviatedPath": "\/CMB2\/images\/ui-bg_glass_95_fef1ec_1x400.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/cmb2\/images\/ui-bg_highlight-soft_75_cccccc_1x100.png": {
+	"\/CMB2\/images\/ui-bg_highlight-soft_75_cccccc_1x100.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 101,
-		"inputAbbreviatedPath": "\/cmb2\/images\/ui-bg_highlight-soft_75_cccccc_1x100.png",
-		"outputAbbreviatedPath": "\/cmb2\/images\/ui-bg_highlight-soft_75_cccccc_1x100.png",
+		"inputAbbreviatedPath": "\/CMB2\/images\/ui-bg_highlight-soft_75_cccccc_1x100.png",
+		"outputAbbreviatedPath": "\/CMB2\/images\/ui-bg_highlight-soft_75_cccccc_1x100.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/cmb2\/images\/ui-icons_222222_256x240.png": {
+	"\/CMB2\/images\/ui-icons_222222_256x240.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 4369,
-		"inputAbbreviatedPath": "\/cmb2\/images\/ui-icons_222222_256x240.png",
-		"outputAbbreviatedPath": "\/cmb2\/images\/ui-icons_222222_256x240.png",
+		"inputAbbreviatedPath": "\/CMB2\/images\/ui-icons_222222_256x240.png",
+		"outputAbbreviatedPath": "\/CMB2\/images\/ui-icons_222222_256x240.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/cmb2\/images\/ui-icons_2e83ff_256x240.png": {
+	"\/CMB2\/images\/ui-icons_2e83ff_256x240.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 4369,
-		"inputAbbreviatedPath": "\/cmb2\/images\/ui-icons_2e83ff_256x240.png",
-		"outputAbbreviatedPath": "\/cmb2\/images\/ui-icons_2e83ff_256x240.png",
+		"inputAbbreviatedPath": "\/CMB2\/images\/ui-icons_2e83ff_256x240.png",
+		"outputAbbreviatedPath": "\/CMB2\/images\/ui-icons_2e83ff_256x240.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/cmb2\/images\/ui-icons_454545_256x240.png": {
+	"\/CMB2\/images\/ui-icons_454545_256x240.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 4369,
-		"inputAbbreviatedPath": "\/cmb2\/images\/ui-icons_454545_256x240.png",
-		"outputAbbreviatedPath": "\/cmb2\/images\/ui-icons_454545_256x240.png",
+		"inputAbbreviatedPath": "\/CMB2\/images\/ui-icons_454545_256x240.png",
+		"outputAbbreviatedPath": "\/CMB2\/images\/ui-icons_454545_256x240.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/cmb2\/images\/ui-icons_888888_256x240.png": {
+	"\/CMB2\/images\/ui-icons_888888_256x240.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 5355,
-		"inputAbbreviatedPath": "\/cmb2\/images\/ui-icons_888888_256x240.png",
-		"outputAbbreviatedPath": "\/cmb2\/images\/ui-icons_888888_256x240.png",
+		"inputAbbreviatedPath": "\/CMB2\/images\/ui-icons_888888_256x240.png",
+		"outputAbbreviatedPath": "\/CMB2\/images\/ui-icons_888888_256x240.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/cmb2\/images\/ui-icons_cd0a0a_256x240.png": {
+	"\/CMB2\/images\/ui-icons_cd0a0a_256x240.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 4369,
-		"inputAbbreviatedPath": "\/cmb2\/images\/ui-icons_cd0a0a_256x240.png",
-		"outputAbbreviatedPath": "\/cmb2\/images\/ui-icons_cd0a0a_256x240.png",
+		"inputAbbreviatedPath": "\/CMB2\/images\/ui-icons_cd0a0a_256x240.png",
+		"outputAbbreviatedPath": "\/CMB2\/images\/ui-icons_cd0a0a_256x240.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/cmb2\/includes\/CMB2.php": {
+	"\/CMB2\/includes\/CMB2.php": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/cmb2\/includes\/CMB2.php",
+		"inputAbbreviatedPath": "\/CMB2\/includes\/CMB2.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/cmb2\/includes\/CMB2_Ajax.php": {
+	"\/CMB2\/includes\/CMB2_Ajax.php": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/cmb2\/includes\/CMB2_Ajax.php",
+		"inputAbbreviatedPath": "\/CMB2\/includes\/CMB2_Ajax.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/cmb2\/includes\/CMB2_Boxes.php": {
+	"\/CMB2\/includes\/CMB2_Boxes.php": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/cmb2\/includes\/CMB2_Boxes.php",
+		"inputAbbreviatedPath": "\/CMB2\/includes\/CMB2_Boxes.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/cmb2\/includes\/CMB2_Field.php": {
+	"\/CMB2\/includes\/CMB2_Field.php": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/cmb2\/includes\/CMB2_Field.php",
+		"inputAbbreviatedPath": "\/CMB2\/includes\/CMB2_Field.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/cmb2\/includes\/CMB2_hookup.php": {
+	"\/CMB2\/includes\/CMB2_hookup.php": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/cmb2\/includes\/CMB2_hookup.php",
+		"inputAbbreviatedPath": "\/CMB2\/includes\/CMB2_hookup.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/cmb2\/includes\/CMB2_Options.php": {
+	"\/CMB2\/includes\/CMB2_Options.php": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/cmb2\/includes\/CMB2_Options.php",
+		"inputAbbreviatedPath": "\/CMB2\/includes\/CMB2_Options.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/cmb2\/includes\/CMB2_Sanitize.php": {
+	"\/CMB2\/includes\/CMB2_Sanitize.php": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/cmb2\/includes\/CMB2_Sanitize.php",
+		"inputAbbreviatedPath": "\/CMB2\/includes\/CMB2_Sanitize.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/cmb2\/includes\/CMB2_Show_Filters.php": {
+	"\/CMB2\/includes\/CMB2_Show_Filters.php": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/cmb2\/includes\/CMB2_Show_Filters.php",
+		"inputAbbreviatedPath": "\/CMB2\/includes\/CMB2_Show_Filters.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/cmb2\/includes\/CMB2_Types.php": {
+	"\/CMB2\/includes\/CMB2_Types.php": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/cmb2\/includes\/CMB2_Types.php",
+		"inputAbbreviatedPath": "\/CMB2\/includes\/CMB2_Types.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/cmb2\/includes\/CMB2_Utils.php": {
+	"\/CMB2\/includes\/CMB2_Utils.php": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/cmb2\/includes\/CMB2_Utils.php",
+		"inputAbbreviatedPath": "\/CMB2\/includes\/CMB2_Utils.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/cmb2\/includes\/helper-functions.php": {
+	"\/CMB2\/includes\/helper-functions.php": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/cmb2\/includes\/helper-functions.php",
+		"inputAbbreviatedPath": "\/CMB2\/includes\/helper-functions.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/cmb2\/includes\/index.php": {
+	"\/CMB2\/includes\/index.php": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/cmb2\/includes\/index.php",
+		"inputAbbreviatedPath": "\/CMB2\/includes\/index.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/cmb2\/index.php": {
+	"\/CMB2\/index.php": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/cmb2\/index.php",
+		"inputAbbreviatedPath": "\/CMB2\/index.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/cmb2\/init.php": {
+	"\/CMB2\/init.php": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/cmb2\/init.php",
+		"inputAbbreviatedPath": "\/CMB2\/init.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/cmb2\/js\/cmb2.js": {
+	"\/CMB2\/js\/cmb2.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/cmb2\/js\/cmb2.js",
-		"outputAbbreviatedPath": "\/cmb2\/js\/min\/cmb2-min.js",
+		"inputAbbreviatedPath": "\/CMB2\/js\/cmb2.js",
+		"outputAbbreviatedPath": "\/CMB2\/js\/min\/cmb2-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/cmb2\/js\/cmb2.min.js": {
+	"\/CMB2\/js\/cmb2.min.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/cmb2\/js\/cmb2.min.js",
-		"outputAbbreviatedPath": "\/cmb2\/js\/min\/cmb2.min-min.js",
+		"inputAbbreviatedPath": "\/CMB2\/js\/cmb2.min.js",
+		"outputAbbreviatedPath": "\/CMB2\/js\/min\/cmb2.min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/cmb2\/js\/index.php": {
+	"\/CMB2\/js\/index.php": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/cmb2\/js\/index.php",
+		"inputAbbreviatedPath": "\/CMB2\/js\/index.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/cmb2\/js\/jquery-ui-timepicker-addon.min.js": {
+	"\/CMB2\/js\/jquery-ui-timepicker-addon.min.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/cmb2\/js\/jquery-ui-timepicker-addon.min.js",
-		"outputAbbreviatedPath": "\/cmb2\/js\/min\/jquery-ui-timepicker-addon.min-min.js",
+		"inputAbbreviatedPath": "\/CMB2\/js\/jquery-ui-timepicker-addon.min.js",
+		"outputAbbreviatedPath": "\/CMB2\/js\/min\/jquery-ui-timepicker-addon.min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/cmb2\/languages\/index.php": {
+	"\/CMB2\/languages\/index.php": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/cmb2\/languages\/index.php",
+		"inputAbbreviatedPath": "\/CMB2\/languages\/index.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/cmb2\/package.json": {
+	"\/CMB2\/package.json": {
 		"fileType": 524288,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/cmb2\/package.json",
+		"inputAbbreviatedPath": "\/CMB2\/package.json",
 		"orderOutput": 0,
-		"outputAbbreviatedPath": "\/cmb2\/package-min.json",
+		"outputAbbreviatedPath": "\/CMB2\/package-min.json",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1
 		},
-	"\/cmb2\/readme.md": {
+	"\/CMB2\/readme.md": {
 		"criticStyle": 0,
 		"enableFootnotes": 1,
 		"enableLabels": 1,
@@ -689,9 +689,9 @@
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/cmb2\/readme.md",
+		"inputAbbreviatedPath": "\/CMB2\/readme.md",
 		"maskEmailAddresses": 1,
-		"outputAbbreviatedPath": "\/cmb2\/readme.html",
+		"outputAbbreviatedPath": "\/CMB2\/readme.html",
 		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
@@ -701,34 +701,34 @@
 		"randomFootnoteNumbers": 0,
 		"useCompatibilityMode": 0
 		},
-	"\/cmb2\/tests\/bootstrap.php": {
+	"\/CMB2\/tests\/bootstrap.php": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/cmb2\/tests\/bootstrap.php",
+		"inputAbbreviatedPath": "\/CMB2\/tests\/bootstrap.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/cmb2\/tests\/cmb-tests-base.php": {
+	"\/CMB2\/tests\/cmb-tests-base.php": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/cmb2\/tests\/cmb-tests-base.php",
+		"inputAbbreviatedPath": "\/CMB2\/tests\/cmb-tests-base.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/cmb2\/tests\/index.php": {
+	"\/CMB2\/tests\/index.php": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/cmb2\/tests\/index.php",
+		"inputAbbreviatedPath": "\/CMB2\/tests\/index.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/cmb2\/tests\/README.md": {
+	"\/CMB2\/tests\/README.md": {
 		"criticStyle": 0,
 		"enableFootnotes": 1,
 		"enableLabels": 1,
@@ -737,9 +737,9 @@
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/cmb2\/tests\/README.md",
+		"inputAbbreviatedPath": "\/CMB2\/tests\/README.md",
 		"maskEmailAddresses": 1,
-		"outputAbbreviatedPath": "\/cmb2\/tests\/README.html",
+		"outputAbbreviatedPath": "\/CMB2\/tests\/README.html",
 		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
@@ -749,38 +749,38 @@
 		"randomFootnoteNumbers": 0,
 		"useCompatibilityMode": 0
 		},
-	"\/cmb2\/tests\/test-cmb-core.php": {
+	"\/CMB2\/tests\/test-cmb-core.php": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/cmb2\/tests\/test-cmb-core.php",
+		"inputAbbreviatedPath": "\/CMB2\/tests\/test-cmb-core.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/cmb2\/tests\/test-cmb-field.php": {
+	"\/CMB2\/tests\/test-cmb-field.php": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/cmb2\/tests\/test-cmb-field.php",
+		"inputAbbreviatedPath": "\/CMB2\/tests\/test-cmb-field.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/cmb2\/tests\/test-cmb-types.php": {
+	"\/CMB2\/tests\/test-cmb-types.php": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/cmb2\/tests\/test-cmb-types.php",
+		"inputAbbreviatedPath": "\/CMB2\/tests\/test-cmb-types.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/cmb2\/tests\/test-cmb-utils.php": {
+	"\/CMB2\/tests\/test-cmb-utils.php": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/cmb2\/tests\/test-cmb-utils.php",
+		"inputAbbreviatedPath": "\/CMB2\/tests\/test-cmb-utils.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -1618,6 +1618,258 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/fonts\/342848\/019E1478823D17DC4.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/fonts\/342848\/019E1478823D17DC4.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/fonts\/342848\/12BC16CD66C59A117.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/fonts\/342848\/12BC16CD66C59A117.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/fonts\/342848\/1517A18B76462BCA2.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/fonts\/342848\/1517A18B76462BCA2.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/fonts\/342848\/1ACFA44D7C677D641.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/fonts\/342848\/1ACFA44D7C677D641.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/fonts\/342848\/22361233B4179FCCE.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/fonts\/342848\/22361233B4179FCCE.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/fonts\/342848\/2DC8B6E24D1F9B708.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/fonts\/342848\/2DC8B6E24D1F9B708.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/fonts\/342848\/369018E0BD0BD98A7.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/fonts\/342848\/369018E0BD0BD98A7.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/fonts\/342848\/3915E5BA89F227D3B.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/fonts\/342848\/3915E5BA89F227D3B.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/fonts\/342848\/3BD47750D6C053C15.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/fonts\/342848\/3BD47750D6C053C15.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/fonts\/342848\/3DA48F2F72DD26B58.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/fonts\/342848\/3DA48F2F72DD26B58.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/fonts\/342848\/417F5A8FD341C5FB5.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/fonts\/342848\/417F5A8FD341C5FB5.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/fonts\/342848\/45A9DA288F6F19A33.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/fonts\/342848\/45A9DA288F6F19A33.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/fonts\/342848\/48E4D70D7D5D6CC31.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/fonts\/342848\/48E4D70D7D5D6CC31.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/fonts\/342848\/567127902E6F0B898.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/fonts\/342848\/567127902E6F0B898.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/fonts\/342848\/799945197DEDFE786.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/fonts\/342848\/799945197DEDFE786.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/fonts\/342848\/7A36709C45315458D.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/fonts\/342848\/7A36709C45315458D.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/fonts\/342848\/8B4FE016062C9D93E.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/fonts\/342848\/8B4FE016062C9D93E.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/fonts\/342848\/906034EDE58C3D2B1.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/fonts\/342848\/906034EDE58C3D2B1.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/fonts\/342848\/98FEC10B5998213A4.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/fonts\/342848\/98FEC10B5998213A4.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/fonts\/342848\/9ACC6CDED8CF6E669.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/fonts\/342848\/9ACC6CDED8CF6E669.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/fonts\/342848\/B7E5F62DD9B746B30.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/fonts\/342848\/B7E5F62DD9B746B30.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/fonts\/342848\/B9A40211D71BE4F2F.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/fonts\/342848\/B9A40211D71BE4F2F.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/fonts\/342848\/BA446F75F1127F31E.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/fonts\/342848\/BA446F75F1127F31E.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/fonts\/342848\/C2582AD97B8F77F33.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/fonts\/342848\/C2582AD97B8F77F33.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/fonts\/342848\/DEB2D9A3F4CB8CB81.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/fonts\/342848\/DEB2D9A3F4CB8CB81.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/fonts\/342848\/E91CB19FDC64AD28B.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/fonts\/342848\/E91CB19FDC64AD28B.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/fonts\/342848\/EB765545910B761E6.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/fonts\/342848\/EB765545910B761E6.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/fonts\/342848\/F3AEBC43190F37B2A.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/fonts\/342848\/F3AEBC43190F37B2A.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/footer.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -1653,6 +1905,28 @@
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
+		},
+	"\/images\/filler.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2629,
+		"inputAbbreviatedPath": "\/images\/filler.jpg",
+		"outputAbbreviatedPath": "\/images\/filler.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/filler.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3136,
+		"inputAbbreviatedPath": "\/images\/filler.png",
+		"outputAbbreviatedPath": "\/images\/filler.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
 		},
 	"\/images\/lightbox_close_100x100.png": {
 		"fileType": 32768,
@@ -1873,6 +2147,28 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/js\/jquery.lazyload.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/jquery.lazyload.js",
+		"outputAbbreviatedPath": "\/js\/jquery.lazyload.min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 1,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/js\/jquery.lazyload.min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/jquery.lazyload.min.js",
+		"outputAbbreviatedPath": "\/js\/min\/jquery.lazyload.min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/js\/jquery.matchHeight-min.js": {
 		"fileType": 64,
 		"ignore": 0,
@@ -1917,6 +2213,28 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/js\/jquery.scrollstop.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/jquery.scrollstop.js",
+		"outputAbbreviatedPath": "\/js\/min\/jquery.scrollstop-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/js\/jquery.scrollstop.min.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/jquery.scrollstop.min.js",
+		"outputAbbreviatedPath": "\/js\/min\/jquery.scrollstop.min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/js\/min\/custom-min.js": {
 		"fileType": 64,
 		"ignore": 1,
@@ -1945,6 +2263,17 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/min\/jquery.flexslider-min.js",
 		"outputAbbreviatedPath": "\/js\/min\/min\/jquery.flexslider-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/js\/min\/jquery.lazyload-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/min\/jquery.lazyload-min.js",
+		"outputAbbreviatedPath": "\/js\/min\/min\/jquery.lazyload-min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -4129,12 +4458,12 @@
 	},
 "projectAttributes": {
 	"bowerAbbreviatedPath": "",
-	"displayValue": "beast",
+	"displayValue": "beast.tv",
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "harddrive_brown"
 	},
 "projectSettings": {
-	"alwaysUseExternalServer": 1,
+	"alwaysUseExternalServer": 0,
 	"animateCSSInjections": 1,
 	"autoApplyPSLanguageSettingsStyle": 0,
 	"autoprefixerBrowserString": "> 1%, last 2 versions, Firefox ESR, Opera 12.1",
@@ -4276,7 +4605,7 @@
 	"coffeeMinifyOutput": 1,
 	"coffeeOutputStyle": 0,
 	"coffeeSyntaxCheckerStyle": 1,
-	"externalServerAddress": "http:\/\/mrtwebdesign.local\/beast",
+	"externalServerAddress": "http:\/\/localhost:8888",
 	"externalServerPreviewPathAddition": "",
 	"genericWebpageFileExtensionsString": "html, htm, shtml, shtm, xhtml, php, jsp, asp, aspx, erb, ctp",
 	"hamlAutoOutputPathEnabled": 1,

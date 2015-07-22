@@ -49,7 +49,7 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : g
 				</div>
 
 				<div class="row">
-					<div class="col-md-12">
+					<div class="col-md-12 portfolio-sets">
 						<?php
 						$portfolio_args = array(
 							'post_type' => 'portfolio',
@@ -74,6 +74,12 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : g
 						<?php while ( $portfolios->have_posts() ) : $portfolios->the_post(); ?>
 
 							<?php if (has_post_thumbnail($post_id)){
+
+
+								$post_thumbnail_id = get_post_thumbnail_id();
+								$img_src = wp_get_attachment_image_src($post_thumbnail_id  , 'sixteen_nine_background');
+
+
 								?>
 
 								<article id="post-<?php the_ID(); ?>" <?php post_class('portfolio-item'); ?>>
@@ -84,13 +90,20 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : g
 									<div class="entry-content">
 										<a class="editor-thumb" href="#" data-base="#post-<?php the_ID(); ?>">
 											<div class="hover-overlay"></div>
-											<?php echo get_the_post_thumbnail( $post->ID, 'sixteen_nine_background' ); ?>
+											
+											<img class="lazy attachment-sixteen_nine_background wp-post-image" data-original="<?php echo $img_src[0]; ?>" width="<?php echo $img_src[1]; ?>" height="<?php echo $img_src[2]; ?>">
+											<noscript>
+												<?php echo get_the_post_thumbnail( $post->ID, 'sixteen_nine_background' ); ?>
+											</noscript>
 										</a>
 									</div><!-- .entry-content -->
 
 
-									<div class="content-area-wrap">
-										<?php the_content(); ?>
+									<div class="content-area-wrap vid-down">
+										<?php
+										 //the_content(); 
+										echo vimeo_processing(get_the_content());
+										?>
 									</div>
 									<header class="entry-header"><h1 class="entry-title">
 										<?php the_title(); ?>
