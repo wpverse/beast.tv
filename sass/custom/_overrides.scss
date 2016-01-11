@@ -752,7 +752,7 @@ html {
 	background-color: black;
 	height:100%;
 	.sales {
-		margin-top:40px;
+		//margin-top:40px;
 	}
 	.producers{
 
@@ -969,3 +969,168 @@ html {
 		min-height:400px;
 	}
 }
+
+#social-container {
+	display:none;
+}
+
+.post-type-archive-city #social-container,
+.page-template-page-contacts #social-container,
+{
+	display:block;
+	position:fixed;
+	width:100%;
+	z-index:9999;
+	//outline:1px solid black;
+	#social-navigation{
+		display: block;
+		position: relative;
+
+		width: 100%;
+		padding-left: 185px;
+		padding-right: 40px;
+		font-family: 'EB Garamond', serif;
+		//outline:1px solid green;
+		#header-social{
+			display:block;
+			position:absolute;
+			right:75px;
+			line-height:100px;
+			width:149px;
+			z-index:20;
+
+
+			//outline:1px solid red;
+		}
+	}
+	.textwidget{
+		color:white;
+			//font-size:1.1em;
+			a{
+				display:inline-block;
+				padding:0 10px;
+				color:white;
+				font-size:22px;
+				&:hover{
+					color:white;
+				}
+				&:visited{
+					color:white;
+				}
+				&:active{
+					color:white;
+				}
+				&:focus{
+					color:white;
+				}
+			}
+
+			i{
+				
+			}
+
+
+		}
+	}
+
+
+
+	#page #content #header-nav #header-social {
+		.textwidget{
+			color:white;
+			//font-size:1.1em;
+			a{
+				display:inline-block;
+				padding:0 10px;
+				color:white;
+				font-size:22px;
+				&:hover{
+					color:white;
+				}
+				&:visited{
+					color:white;
+				}
+				&:active{
+					color:white;
+				}
+				&:focus{
+					color:white;
+				}
+			}
+
+			i{
+				
+			}
+
+
+		}
+	}
+
+	html header,#city-navigation {
+
+		#header-social{
+			display:block;
+			position:absolute;
+			right:75px;
+			line-height:100px;
+			width:149px;
+			z-index:20;
+			.textwidget{
+				color:white;
+			//font-size:1.1em;
+			a{
+				display:inline-block;
+				padding:0 10px;
+				color:white;
+				font-size:22px;
+				&:hover{
+					color:white;
+				}
+				&:visited{
+					color:white;
+				}
+				&:active{
+					color:white;
+				}
+				&:focus{
+					color:white;
+				}
+			}
+
+			i{
+				
+			}
+
+
+		}
+	}
+}
+
+
+.mean-container .mean-nav ul li.mean-last{
+
+	border-top: 1px solid #383838;
+	border-top: 2px solid rgba(255, 255, 255, 0.5);
+	//padding-left: 20px;
+	.textwidget a {
+		display: block;
+		float: left;
+		width: 20px;
+		padding: 0.8em 20px;
+		font-size:1.3em;
+		border:none;
+		&:first-of-type{
+			padding: 0.8em 20px 0.8em 5%;
+
+		}
+	}
+} 
+
+@media screen and (min-width: 750px) {
+	.main-navigation .menu-wrap ul#primary-menu li.desktop-hidden {
+		display:none;
+	}
+
+}
+
+

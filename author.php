@@ -99,7 +99,7 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : g
 									</div><!-- .entry-content -->
 
 
-									<div class="content-area-wrap vid-down">
+									<div class="content-area-wrap vid-down hidden">
 										<?php
 										 //the_content(); 
 										echo vimeo_processing(get_the_content());

@@ -12,8 +12,19 @@ get_header(); ?>
 <div id="header-nav">
 	<div class="container">	
 		<div id="city-navigation" class="archive-navigation" role="navigation">
-			<div class="row">
+
+				<!--div id="header-social" class="xhidden-sm hidden-xs">
+					<?php //dynamic_sidebar('desktop-social'); ?>
+				</div>
+
+			<div class="row" -->
+		
+
+
 				<div class="col-xs-10 col-xs-offset-1">
+
+
+			
 					<div class="menu-wrap">
 						<h1 class="page-title">Editors <span class="breadcrumb-caret"></span>> <span id="breadcrumb-city"></span></h1>
 					</div>

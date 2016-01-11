@@ -301,6 +301,16 @@ function beast_widgets_init() {
 		'before_title'  => '<h1 class="widget-title">',
 		'after_title'   => '</h1>',
 		) );
+		register_sidebar( array(
+		'name'          => __( 'Social links', 'beast' ),
+		'id'            => 'desktop-social',
+		'description'   => '',
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '',
+		'after_title'   => '',
+		) );
+
 }
 add_action( 'widgets_init', 'beast_widgets_init' );
 
@@ -411,4 +421,103 @@ if (!function_exists('write_log')) {
             }
         }
     }
+}
+
+
+
+add_filter( 'manage_edit-portfolio_columns', 'my_add_portfolio_client_column' );
+function my_add_portfolio_client_column( $columns ) {
+    $columns['column-meta'] = 'Client';
+ 
+    //To make a column 'un-sortable' remove it from the array
+    //unset($columns['date']);
+ 
+    return $columns;
+}
+
+
+
+//add_action( 'manage_portfolio_posts_custom_column', 'my_cake_column_content', 10, 2 );
+function my_cake_column_content( $column_name, $post_id ) {
+    if ( 'Client' != $column_name )
+        return;
+    //Get number of slices from post meta
+    $slices = get_post_meta($post_id, 'client', true);
+    echo intval($slices);
+}
+
+//add_filter( 'manage_edit-portfolio_sortable_columns', 'my_sortable_portfolio_column' );
+function my_sortable_portfolio_column( $columns ) {
+    $columns['column-meta'] = 'Client';
+ 
+    //To make a column 'un-sortable' remove it from the array
+    //unset($columns['date']);
+ 
+    return $columns;
+}
+
+
+//add_action('restrict_manage_posts','restrict_listings_by_business');
+function restrict_listings_by_business() {
+    global $typenow;
+    global $wp_query;
+    if ($typenow=='portfolio') {
+        $taxonomy = 'business';
+        $business_taxonomy = get_taxonomy($taxonomy);
+        wp_dropdown_categories(array(
+            'show_option_all' =>  __("Show All {$business_taxonomy->label}"),
+            'taxonomy'        =>  $taxonomy,
+            'name'            =>  'business',
+            'orderby'         =>  'name',
+            'selected'        =>  $wp_query->query['term'],
+            'hierarchical'    =>  true,
+            'depth'           =>  3,
+            'show_count'      =>  true, // Show # listings in parens
+            'hide_empty'      =>  true, // Don't show businesses w/o listings
+        ));
+    }
+}
+
+
+
+/*
+ * Search custom fields from admin keyword searches
+ */
+
+function rel_search_join( $join ) {
+    global $pagenow, $wpdb;
+    if ( is_admin() && $pagenow == 'edit.php' && $_GET['post_type'] == 'portfolio' && $_GET['s'] != '') {    
+        $join .= 'LEFT JOIN ' . $wpdb->postmeta . ' ON '. $wpdb->posts . '.ID = ' . $wpdb->postmeta . '.post_id ';
+    }
+    //echo '<br><strong>JOIN</strong>: ';
+    //print_r ( $join );
+    //echo '<br>';
+    return $join;
+}
+add_filter('posts_join', 'rel_search_join' );
+
+function rel_search_where( $where ) {
+    global $pagenow, $wpdb;
+    if ( is_admin() && $pagenow == 'edit.php' && $_GET['post_type']=='portfolio' && $_GET['s'] != '' ) {
+        $where = preg_replace( "/\(\s*".$wpdb->posts.".post_title\s+LIKE\s*(\'[^\']+\')\s*\)/", "(".$wpdb->posts.".post_title LIKE $1) OR (".$wpdb->postmeta.".meta_value LIKE $1)", $where );
+        $where = str_replace( "OR wp_posts.post_status = 'pending'", "", $where );
+        $where = str_replace( "OR wp_posts.post_status = 'private'", "", $where );
+        $where = str_replace( "OR wp_posts.post_status = 'draft'", "", $where );
+        $where = str_replace( "OR wp_posts.post_status = 'future'", "", $where );
+    }
+    //echo '<br><strong>WHERE</strong>: ';
+    //print_r ( $where );
+    //echo '<br>';
+    return $where;
+}
+add_filter( 'posts_where', 'rel_search_where' );
+
+
+add_filter( 'posts_groupby', 'my_post_limits' );
+function my_post_limits($groupby) {
+    global $pagenow, $wpdb;
+    if ( is_admin() && $pagenow == 'edit.php' && $_GET['post_type']=='portfolio' && $_GET['s'] != '' ) {
+        $groupby = "$wpdb->posts.ID";
+    }
+    return $groupby;
 }

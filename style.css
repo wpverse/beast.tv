@@ -1029,8 +1029,6 @@ html {
 .page-template-page-contacts #page #content {
   background-color: black;
   height: 100%; }
-  .page-template-page-contacts #page #content .sales {
-    margin-top: 40px; }
   .page-template-page-contacts #page #content .producers {
     color: #96d0da; }
     .page-template-page-contacts #page #content .producers h2 {
@@ -1180,5 +1178,107 @@ html {
 @media screen and (min-width: 767px) {
   article.portfolio-item {
     min-height: 400px; } }
+#social-container {
+  display: none; }
+
+.post-type-archive-city #social-container,
+.page-template-page-contacts #social-container {
+  display: block;
+  position: fixed;
+  width: 100%;
+  z-index: 9999; }
+  .post-type-archive-city #social-container #social-navigation,
+  .page-template-page-contacts #social-container #social-navigation {
+    display: block;
+    position: relative;
+    width: 100%;
+    padding-left: 185px;
+    padding-right: 40px;
+    font-family: 'EB Garamond', serif; }
+    .post-type-archive-city #social-container #social-navigation #header-social,
+    .page-template-page-contacts #social-container #social-navigation #header-social {
+      display: block;
+      position: absolute;
+      right: 75px;
+      line-height: 100px;
+      width: 149px;
+      z-index: 20; }
+  .post-type-archive-city #social-container .textwidget,
+  .page-template-page-contacts #social-container .textwidget {
+    color: white; }
+    .post-type-archive-city #social-container .textwidget a,
+    .page-template-page-contacts #social-container .textwidget a {
+      display: inline-block;
+      padding: 0 10px;
+      color: white;
+      font-size: 22px; }
+      .post-type-archive-city #social-container .textwidget a:hover,
+      .page-template-page-contacts #social-container .textwidget a:hover {
+        color: white; }
+      .post-type-archive-city #social-container .textwidget a:visited,
+      .page-template-page-contacts #social-container .textwidget a:visited {
+        color: white; }
+      .post-type-archive-city #social-container .textwidget a:active,
+      .page-template-page-contacts #social-container .textwidget a:active {
+        color: white; }
+      .post-type-archive-city #social-container .textwidget a:focus,
+      .page-template-page-contacts #social-container .textwidget a:focus {
+        color: white; }
+
+#page #content #header-nav #header-social .textwidget {
+  color: white; }
+  #page #content #header-nav #header-social .textwidget a {
+    display: inline-block;
+    padding: 0 10px;
+    color: white;
+    font-size: 22px; }
+    #page #content #header-nav #header-social .textwidget a:hover {
+      color: white; }
+    #page #content #header-nav #header-social .textwidget a:visited {
+      color: white; }
+    #page #content #header-nav #header-social .textwidget a:active {
+      color: white; }
+    #page #content #header-nav #header-social .textwidget a:focus {
+      color: white; }
+
+html header #header-social, #city-navigation #header-social {
+  display: block;
+  position: absolute;
+  right: 75px;
+  line-height: 100px;
+  width: 149px;
+  z-index: 20; }
+  html header #header-social .textwidget, #city-navigation #header-social .textwidget {
+    color: white; }
+    html header #header-social .textwidget a, #city-navigation #header-social .textwidget a {
+      display: inline-block;
+      padding: 0 10px;
+      color: white;
+      font-size: 22px; }
+      html header #header-social .textwidget a:hover, #city-navigation #header-social .textwidget a:hover {
+        color: white; }
+      html header #header-social .textwidget a:visited, #city-navigation #header-social .textwidget a:visited {
+        color: white; }
+      html header #header-social .textwidget a:active, #city-navigation #header-social .textwidget a:active {
+        color: white; }
+      html header #header-social .textwidget a:focus, #city-navigation #header-social .textwidget a:focus {
+        color: white; }
+
+.mean-container .mean-nav ul li.mean-last {
+  border-top: 1px solid #383838;
+  border-top: 2px solid rgba(255, 255, 255, 0.5); }
+  .mean-container .mean-nav ul li.mean-last .textwidget a {
+    display: block;
+    float: left;
+    width: 20px;
+    padding: 0.8em 20px;
+    font-size: 1.3em;
+    border: none; }
+    .mean-container .mean-nav ul li.mean-last .textwidget a:first-of-type {
+      padding: 0.8em 20px 0.8em 5%; }
+
+@media screen and (min-width: 750px) {
+  .main-navigation .menu-wrap ul#primary-menu li.desktop-hidden {
+    display: none; } }
 
 /*# sourceMappingURL=style.css.map */
